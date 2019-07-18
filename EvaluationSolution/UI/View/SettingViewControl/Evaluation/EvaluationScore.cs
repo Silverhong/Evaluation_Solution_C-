@@ -8,15 +8,17 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using EvaluationSolution.Entity;
+using EvaluationSolution.Report;
 
 namespace EvaluationSolution.UI.View.SettingViewControl.Evaluation
 {
     public partial class EvaluationScore : MainView
     {
+        List<VEvaluationScore> listStaff = new List<VEvaluationScore>();
         public EvaluationScore()
         {
             InitializeComponent();
-            List<VEvaluationScore> listStaff = new List<VEvaluationScore>();
+            
             listStaff.Add(new VEvaluationScore()
             {
                 No = "001",
@@ -91,7 +93,7 @@ namespace EvaluationSolution.UI.View.SettingViewControl.Evaluation
             });
             listStaff.Add(new VEvaluationScore()
             {
-                No = "0010",
+                No = "010",
                 ID = "S0010",
                 SName = "Ratanak",
                 Gender = "Male",
@@ -102,7 +104,11 @@ namespace EvaluationSolution.UI.View.SettingViewControl.Evaluation
 
         private void BtnPrint_Click(object sender, EventArgs e)
         {
-
+            ReportForm reportForm = new ReportForm();
+            reportForm.StaffScore.SetDataSource(listStaff);
+            reportForm.StaffScore.SetParameterValue(0, "បញ្ជីឈ្មោះបុគ្កលិកឆ្នើមទាំង ១០ រូប");
+            reportForm.StaffScore.SetParameterValue(1, "នៃការិយាល័យ ព័ត៌មានវិទ្យា នៃស្ថាប័នជីជី");
+            reportForm.ShowDialog();
         }
     }
 }

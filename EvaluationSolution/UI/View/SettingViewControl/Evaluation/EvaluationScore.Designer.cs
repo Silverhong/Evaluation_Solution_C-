@@ -47,6 +47,14 @@
             this.metroComboBox1.FontSize = MetroFramework.MetroComboBoxSize.Tall;
             this.metroComboBox1.FormattingEnabled = true;
             this.metroComboBox1.ItemHeight = 29;
+            this.metroComboBox1.Items.AddRange(new object[] {
+            "Programming",
+            "Design",
+            "Networking",
+            "Media",
+            "Accounting",
+            "HR",
+            "Service Maintenance"});
             this.metroComboBox1.Location = new System.Drawing.Point(332, 31);
             this.metroComboBox1.Name = "metroComboBox1";
             this.metroComboBox1.Size = new System.Drawing.Size(198, 35);

@@ -10,6 +10,7 @@ namespace EvaluationSolution.Entity
     {
         public string OfficeId { get; set; }
         public string Officename { get; set; }
+        public string Department { get; set; }
 
     }
 }

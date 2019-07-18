@@ -112,6 +112,18 @@
     <Compile Include="Infrastructure\StaticMessage.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Report\ReportForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Report\ReportForm.Designer.cs">
+      <DependentUpon>ReportForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\StaffScore.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>StaffScore.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="UI\Control\ImageButton.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -238,6 +250,12 @@
     <Compile Include="UI\View\SettingView.Designer.cs">
       <DependentUpon>SettingView.cs</DependentUpon>
     </Compile>
+    <Compile Include="UI\View\SettingViewControl\AddType.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\View\SettingViewControl\AddType.Designer.cs">
+      <DependentUpon>AddType.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI\View\SettingViewControl\Evaluation\AddEvaluation.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -255,6 +273,12 @@
     </Compile>
     <Compile Include="UI\View\SettingViewControl\Evaluation\AddEvaluationControl\SelectStaff.Designer.cs">
       <DependentUpon>SelectStaff.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\View\SettingViewControl\Evaluation\AddQuestion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\View\SettingViewControl\Evaluation\AddQuestion.Designer.cs">
+      <DependentUpon>AddQuestion.cs</DependentUpon>
     </Compile>
     <Compile Include="UI\View\SettingViewControl\Evaluation\EvaluationDetailForm.cs">
       <SubType>Form</SubType>
@@ -286,6 +310,18 @@
     <Compile Include="UI\View\SettingViewControl\Evaluation\EvaluationType.Designer.cs">
       <DependentUpon>EvaluationType.cs</DependentUpon>
     </Compile>
+    <Compile Include="UI\View\SettingViewControl\User Management\AddUserAccount.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\View\SettingViewControl\User Management\AddUserAccount.Designer.cs">
+      <DependentUpon>AddUserAccount.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\View\SettingViewControl\User Management\AddUserRole.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\View\SettingViewControl\User Management\AddUserRole.Designer.cs">
+      <DependentUpon>AddUserRole.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI\View\SettingViewControl\User Management\EvaluatedHistroy.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -314,6 +350,13 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Report\ReportForm.resx">
+      <DependentUpon>ReportForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\StaffScore.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>StaffScore.cs</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="UI\Control\ImageButton.resx">
       <DependentUpon>ImageButton.cs</DependentUpon>
     </EmbeddedResource>
@@ -374,6 +417,9 @@
     <EmbeddedResource Include="UI\View\SettingView.resx">
       <DependentUpon>SettingView.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UI\View\SettingViewControl\AddType.resx">
+      <DependentUpon>AddType.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UI\View\SettingViewControl\Evaluation\AddEvaluation.resx">
       <DependentUpon>AddEvaluation.cs</DependentUpon>
     </EmbeddedResource>
@@ -382,6 +428,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UI\View\SettingViewControl\Evaluation\AddEvaluationControl\SelectStaff.resx">
       <DependentUpon>SelectStaff.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\View\SettingViewControl\Evaluation\AddQuestion.resx">
+      <DependentUpon>AddQuestion.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\View\SettingViewControl\Evaluation\EvaluationDetailForm.resx">
       <DependentUpon>EvaluationDetailForm.cs</DependentUpon>
@@ -397,6 +446,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UI\View\SettingViewControl\Evaluation\EvaluationType.resx">
       <DependentUpon>EvaluationType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\View\SettingViewControl\User Management\AddUserAccount.resx">
+      <DependentUpon>AddUserAccount.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\View\SettingViewControl\User Management\AddUserRole.resx">
+      <DependentUpon>AddUserRole.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\View\SettingViewControl\User Management\EvaluatedHistroy.resx">
       <DependentUpon>EvaluatedHistroy.cs</DependentUpon>

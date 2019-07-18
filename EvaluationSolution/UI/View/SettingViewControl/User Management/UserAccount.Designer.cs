@@ -40,7 +40,7 @@
             this.metroLabel2 = new MetroFramework.Controls.MetroLabel();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.metroButton2 = new MetroFramework.Controls.MetroButton();
-            this.btnAddStaff = new MetroFramework.Controls.MetroButton();
+            this.btnAddAccount = new MetroFramework.Controls.MetroButton();
             this.metroTile1 = new MetroFramework.Controls.MetroTile();
             this.lbTotal = new MetroFramework.Controls.MetroLabel();
             this.metroLabel5 = new MetroFramework.Controls.MetroLabel();
@@ -189,15 +189,16 @@
             this.metroButton2.Text = "Delete Account";
             this.metroButton2.UseSelectable = true;
             // 
-            // btnAddStaff
+            // btnAddAccount
             // 
-            this.btnAddStaff.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnAddStaff.Location = new System.Drawing.Point(689, 576);
-            this.btnAddStaff.Name = "btnAddStaff";
-            this.btnAddStaff.Size = new System.Drawing.Size(108, 42);
-            this.btnAddStaff.TabIndex = 22;
-            this.btnAddStaff.Text = "Add Account";
-            this.btnAddStaff.UseSelectable = true;
+            this.btnAddAccount.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnAddAccount.Location = new System.Drawing.Point(689, 576);
+            this.btnAddAccount.Name = "btnAddAccount";
+            this.btnAddAccount.Size = new System.Drawing.Size(108, 42);
+            this.btnAddAccount.TabIndex = 22;
+            this.btnAddAccount.Text = "Add Account";
+            this.btnAddAccount.UseSelectable = true;
+            this.btnAddAccount.Click += new System.EventHandler(this.BtnAddAccount_Click);
             // 
             // metroTile1
             // 
@@ -245,7 +246,7 @@
             this.Controls.Add(this.lbTotal);
             this.Controls.Add(this.metroTile1);
             this.Controls.Add(this.metroButton2);
-            this.Controls.Add(this.btnAddStaff);
+            this.Controls.Add(this.btnAddAccount);
             this.Controls.Add(this.metroComboBox2);
             this.Controls.Add(this.metroComboBox1);
             this.Controls.Add(this.metroLabel3);
@@ -271,7 +272,7 @@
         private MetroFramework.Controls.MetroLabel metroLabel2;
         private System.Windows.Forms.TextBox textBox1;
         private MetroFramework.Controls.MetroButton metroButton2;
-        private MetroFramework.Controls.MetroButton btnAddStaff;
+        private MetroFramework.Controls.MetroButton btnAddAccount;
         private MetroFramework.Controls.MetroTile metroTile1;
         private MetroFramework.Controls.MetroLabel lbTotal;
         private MetroFramework.Controls.MetroLabel metroLabel5;

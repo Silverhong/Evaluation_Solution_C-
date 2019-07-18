@@ -25,5 +25,11 @@ namespace EvaluationSolution.UI.View.SettingViewControl.Evaluation
         {
             dataGridMain.ClearSelection();
         }
+
+        private void BtnAddType_Click(object sender, EventArgs e)
+        {
+            AddType addType = new AddType();
+            addType.ShowDialog();
+        }
     }
 }

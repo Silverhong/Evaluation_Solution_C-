@@ -40,5 +40,11 @@ namespace EvaluationSolution.UI.View.SettingViewControl.Evaluation
         {
             dataGridMain.ClearSelection();
         }
+
+        private void BtnAddQuestion_Click(object sender, EventArgs e)
+        {
+            AddQuestion addQuestion = new AddQuestion();
+            addQuestion.ShowDialog();
+        }
     }
 }

@@ -34,7 +34,7 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.metroTile1 = new MetroFramework.Controls.MetroTile();
             this.btnDeleteEvaluation = new MetroFramework.Controls.MetroButton();
-            this.btnAddEvaluation = new MetroFramework.Controls.MetroButton();
+            this.btnAddQuestion = new MetroFramework.Controls.MetroButton();
             this.dataGridMain = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridMain)).BeginInit();
             this.SuspendLayout();
@@ -64,15 +64,16 @@
             this.btnDeleteEvaluation.Text = "Delete Question";
             this.btnDeleteEvaluation.UseSelectable = true;
             // 
-            // btnAddEvaluation
+            // btnAddQuestion
             // 
-            this.btnAddEvaluation.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnAddEvaluation.Location = new System.Drawing.Point(689, 576);
-            this.btnAddEvaluation.Name = "btnAddEvaluation";
-            this.btnAddEvaluation.Size = new System.Drawing.Size(108, 42);
-            this.btnAddEvaluation.TabIndex = 38;
-            this.btnAddEvaluation.Text = "Add Question";
-            this.btnAddEvaluation.UseSelectable = true;
+            this.btnAddQuestion.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnAddQuestion.Location = new System.Drawing.Point(689, 576);
+            this.btnAddQuestion.Name = "btnAddQuestion";
+            this.btnAddQuestion.Size = new System.Drawing.Size(108, 42);
+            this.btnAddQuestion.TabIndex = 38;
+            this.btnAddQuestion.Text = "Add Question";
+            this.btnAddQuestion.UseSelectable = true;
+            this.btnAddQuestion.Click += new System.EventHandler(this.BtnAddQuestion_Click);
             // 
             // dataGridMain
             // 
@@ -141,7 +142,7 @@
             this.BackColor = System.Drawing.Color.White;
             this.Controls.Add(this.metroTile1);
             this.Controls.Add(this.btnDeleteEvaluation);
-            this.Controls.Add(this.btnAddEvaluation);
+            this.Controls.Add(this.btnAddQuestion);
             this.Controls.Add(this.dataGridMain);
             this.Name = "EvaluationQuestion";
             this.Size = new System.Drawing.Size(950, 630);
@@ -154,7 +155,7 @@
 
         private MetroFramework.Controls.MetroTile metroTile1;
         private MetroFramework.Controls.MetroButton btnDeleteEvaluation;
-        private MetroFramework.Controls.MetroButton btnAddEvaluation;
+        private MetroFramework.Controls.MetroButton btnAddQuestion;
         private System.Windows.Forms.DataGridView dataGridMain;
     }
 }

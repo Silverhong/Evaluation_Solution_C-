@@ -34,7 +34,7 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.metroTile1 = new MetroFramework.Controls.MetroTile();
             this.metroButton2 = new MetroFramework.Controls.MetroButton();
-            this.btnAddStaff = new MetroFramework.Controls.MetroButton();
+            this.btnAddRole = new MetroFramework.Controls.MetroButton();
             this.DataGridMain = new System.Windows.Forms.DataGridView();
             this.metroLabel5 = new MetroFramework.Controls.MetroLabel();
             this.lbTotal = new MetroFramework.Controls.MetroLabel();
@@ -66,15 +66,16 @@
             this.metroButton2.Text = "Delete Role";
             this.metroButton2.UseSelectable = true;
             // 
-            // btnAddStaff
+            // btnAddRole
             // 
-            this.btnAddStaff.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnAddStaff.Location = new System.Drawing.Point(689, 576);
-            this.btnAddStaff.Name = "btnAddStaff";
-            this.btnAddStaff.Size = new System.Drawing.Size(108, 42);
-            this.btnAddStaff.TabIndex = 32;
-            this.btnAddStaff.Text = "Add Role";
-            this.btnAddStaff.UseSelectable = true;
+            this.btnAddRole.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnAddRole.Location = new System.Drawing.Point(689, 576);
+            this.btnAddRole.Name = "btnAddRole";
+            this.btnAddRole.Size = new System.Drawing.Size(108, 42);
+            this.btnAddRole.TabIndex = 32;
+            this.btnAddRole.Text = "Add Role";
+            this.btnAddRole.UseSelectable = true;
+            this.btnAddRole.Click += new System.EventHandler(this.BtnAddRole_Click);
             // 
             // DataGridMain
             // 
@@ -166,7 +167,7 @@
             this.Controls.Add(this.lbTotal);
             this.Controls.Add(this.metroTile1);
             this.Controls.Add(this.metroButton2);
-            this.Controls.Add(this.btnAddStaff);
+            this.Controls.Add(this.btnAddRole);
             this.Controls.Add(this.DataGridMain);
             this.Name = "UserRole";
             this.Size = new System.Drawing.Size(950, 630);
@@ -180,7 +181,7 @@
 
         private MetroFramework.Controls.MetroTile metroTile1;
         private MetroFramework.Controls.MetroButton metroButton2;
-        private MetroFramework.Controls.MetroButton btnAddStaff;
+        private MetroFramework.Controls.MetroButton btnAddRole;
         private System.Windows.Forms.DataGridView DataGridMain;
         private MetroFramework.Controls.MetroLabel metroLabel5;
         private MetroFramework.Controls.MetroLabel lbTotal;

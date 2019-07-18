@@ -52,13 +52,13 @@
             this.label13 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
-            this.metroButton4 = new MetroFramework.Controls.MetroButton();
-            this.btnAddQuestion = new MetroFramework.Controls.MetroButton();
             this.panel3 = new System.Windows.Forms.Panel();
             this.btnClearAll = new MetroFramework.Controls.MetroButton();
             this.lbDescription = new System.Windows.Forms.Label();
             this.btnDailyActivities = new System.Windows.Forms.Button();
             this.btnHistory = new System.Windows.Forms.Button();
+            this.btnAddQuestion = new MetroFramework.Controls.MetroButton();
+            this.metroButton4 = new MetroFramework.Controls.MetroButton();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridMain)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -348,34 +348,6 @@
             this.label11.TabIndex = 0;
             this.label11.Text = "សេចក្តីណែនាំ";
             // 
-            // metroButton4
-            // 
-            this.metroButton4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.metroButton4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.metroButton4.ForeColor = System.Drawing.Color.White;
-            this.metroButton4.Location = new System.Drawing.Point(735, 633);
-            this.metroButton4.Name = "metroButton4";
-            this.metroButton4.Size = new System.Drawing.Size(139, 44);
-            this.metroButton4.TabIndex = 55;
-            this.metroButton4.Text = "Cancel";
-            this.metroButton4.UseCustomBackColor = true;
-            this.metroButton4.UseCustomForeColor = true;
-            this.metroButton4.UseSelectable = true;
-            // 
-            // btnAddQuestion
-            // 
-            this.btnAddQuestion.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnAddQuestion.BackColor = System.Drawing.Color.Green;
-            this.btnAddQuestion.ForeColor = System.Drawing.Color.White;
-            this.btnAddQuestion.Location = new System.Drawing.Point(573, 633);
-            this.btnAddQuestion.Name = "btnAddQuestion";
-            this.btnAddQuestion.Size = new System.Drawing.Size(145, 44);
-            this.btnAddQuestion.TabIndex = 56;
-            this.btnAddQuestion.Text = "Submit";
-            this.btnAddQuestion.UseCustomBackColor = true;
-            this.btnAddQuestion.UseCustomForeColor = true;
-            this.btnAddQuestion.UseSelectable = true;
-            // 
             // panel3
             // 
             this.panel3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -455,6 +427,34 @@
             this.btnHistory.UseVisualStyleBackColor = false;
             this.btnHistory.Click += new System.EventHandler(this.BtnHistory_Click);
             // 
+            // btnAddQuestion
+            // 
+            this.btnAddQuestion.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnAddQuestion.BackColor = System.Drawing.Color.Green;
+            this.btnAddQuestion.ForeColor = System.Drawing.Color.White;
+            this.btnAddQuestion.Location = new System.Drawing.Point(573, 633);
+            this.btnAddQuestion.Name = "btnAddQuestion";
+            this.btnAddQuestion.Size = new System.Drawing.Size(145, 44);
+            this.btnAddQuestion.TabIndex = 56;
+            this.btnAddQuestion.Text = "Submit";
+            this.btnAddQuestion.UseCustomBackColor = true;
+            this.btnAddQuestion.UseCustomForeColor = true;
+            this.btnAddQuestion.UseSelectable = true;
+            // 
+            // metroButton4
+            // 
+            this.metroButton4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.metroButton4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.metroButton4.ForeColor = System.Drawing.Color.White;
+            this.metroButton4.Location = new System.Drawing.Point(735, 633);
+            this.metroButton4.Name = "metroButton4";
+            this.metroButton4.Size = new System.Drawing.Size(139, 44);
+            this.metroButton4.TabIndex = 55;
+            this.metroButton4.Text = "Cancel";
+            this.metroButton4.UseCustomBackColor = true;
+            this.metroButton4.UseCustomForeColor = true;
+            this.metroButton4.UseSelectable = true;
+            // 
             // EvaluationView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -496,8 +496,6 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Panel panel2;
-        private MetroFramework.Controls.MetroButton metroButton4;
-        private MetroFramework.Controls.MetroButton btnAddQuestion;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label13;
@@ -507,5 +505,7 @@
         private MetroFramework.Controls.MetroButton btnClearAll;
         private System.Windows.Forms.Label lbDescription;
         private System.Windows.Forms.Button btnDailyActivities;
+        private MetroFramework.Controls.MetroButton metroButton4;
+        private MetroFramework.Controls.MetroButton btnAddQuestion;
     }
 }

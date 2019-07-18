@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using EvaluationSolution.UI.View.SettingViewControl.User_Management;
 
 namespace EvaluationSolution.UI.View.SettingViewControl
 {
@@ -38,6 +39,12 @@ namespace EvaluationSolution.UI.View.SettingViewControl
         private void DataGridMain_DataBindingComplete(object sender, DataGridViewBindingCompleteEventArgs e)
         {
             DataGridMain.ClearSelection();
+        }
+
+        private void BtnAddRole_Click(object sender, EventArgs e)
+        {
+            AddUserRole addUserRole = new AddUserRole();
+            addUserRole.ShowDialog();
         }
     }
 }
