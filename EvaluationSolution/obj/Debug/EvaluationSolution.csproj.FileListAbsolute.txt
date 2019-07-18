@@ -1,0 +1,126 @@
+C:\Users\Kimhong\Desktop\evaluationsolution\EvaluationSolution\bin\Debug\EvaluationSolution.exe.config
+C:\Users\Kimhong\Desktop\evaluationsolution\EvaluationSolution\bin\Debug\EvaluationSolution.exe
+C:\Users\Kimhong\Desktop\evaluationsolution\EvaluationSolution\bin\Debug\EvaluationSolution.pdb
+C:\Users\Kimhong\Desktop\evaluationsolution\EvaluationSolution\bin\Debug\CrystalDecisions.CrystalReports.Engine.dll
+C:\Users\Kimhong\Desktop\evaluationsolution\EvaluationSolution\bin\Debug\CrystalDecisions.ReportSource.dll
+C:\Users\Kimhong\Desktop\evaluationsolution\EvaluationSolution\bin\Debug\CrystalDecisions.Shared.dll
+C:\Users\Kimhong\Desktop\evaluationsolution\EvaluationSolution\bin\Debug\CrystalDecisions.Windows.Forms.dll
+C:\Users\Kimhong\Desktop\evaluationsolution\EvaluationSolution\bin\Debug\FlashControlV71.dll
+C:\Users\Kimhong\Desktop\evaluationsolution\EvaluationSolution\bin\Debug\MetroFramework.Design.dll
+C:\Users\Kimhong\Desktop\evaluationsolution\EvaluationSolution\bin\Debug\MetroFramework.dll
+C:\Users\Kimhong\Desktop\evaluationsolution\EvaluationSolution\bin\Debug\MetroFramework.Fonts.dll
+C:\Users\Kimhong\Desktop\evaluationsolution\EvaluationSolution\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Kimhong\Desktop\evaluationsolution\EvaluationSolution\bin\Debug\Ninject.dll
+C:\Users\Kimhong\Desktop\evaluationsolution\EvaluationSolution\bin\Debug\CrystalDecisions.ReportAppServer.DataDefModel.dll
+C:\Users\Kimhong\Desktop\evaluationsolution\EvaluationSolution\bin\Debug\CrystalDecisions.ReportAppServer.ClientDoc.dll
+C:\Users\Kimhong\Desktop\evaluationsolution\EvaluationSolution\bin\Debug\CrystalDecisions.ReportAppServer.ReportDefModel.dll
+C:\Users\Kimhong\Desktop\evaluationsolution\EvaluationSolution\bin\Debug\CrystalDecisions.ReportAppServer.Controllers.dll
+C:\Users\Kimhong\Desktop\evaluationsolution\EvaluationSolution\bin\Debug\CrystalDecisions.ReportAppServer.CommLayer.dll
+C:\Users\Kimhong\Desktop\evaluationsolution\EvaluationSolution\bin\Debug\CrystalDecisions.ReportAppServer.DataSetConversion.dll
+C:\Users\Kimhong\Desktop\evaluationsolution\EvaluationSolution\bin\Debug\CrystalDecisions.ReportAppServer.Prompting.dll
+C:\Users\Kimhong\Desktop\evaluationsolution\EvaluationSolution\bin\Debug\CrystalDecisions.ReportAppServer.XmlSerialize.dll
+C:\Users\Kimhong\Desktop\evaluationsolution\EvaluationSolution\bin\Debug\CrystalDecisions.ReportAppServer.CubeDefModel.dll
+C:\Users\Kimhong\Desktop\evaluationsolution\EvaluationSolution\bin\Debug\CrystalDecisions.ReportAppServer.CommonObjectModel.dll
+C:\Users\Kimhong\Desktop\evaluationsolution\EvaluationSolution\bin\Debug\CrystalDecisions.ReportAppServer.ObjectFactory.dll
+C:\Users\Kimhong\Desktop\evaluationsolution\EvaluationSolution\bin\Debug\ShockwaveFlashObjects.dll
+C:\Users\Kimhong\Desktop\evaluationsolution\EvaluationSolution\bin\Debug\CrystalDecisions.ReportAppServer.CommonControls.dll
+C:\Users\Kimhong\Desktop\evaluationsolution\EvaluationSolution\bin\Debug\stdole.dll
+C:\Users\Kimhong\Desktop\evaluationsolution\EvaluationSolution\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Kimhong\Desktop\evaluationsolution\EvaluationSolution\bin\Debug\Ninject.xml
+C:\Users\Kimhong\Desktop\evaluationsolution\EvaluationSolution\obj\Debug\EvaluationSolution.Properties.Resources.resources
+C:\Users\Kimhong\Desktop\evaluationsolution\EvaluationSolution\obj\Debug\EvaluationSolution.UI.Control.ImageButton.resources
+C:\Users\Kimhong\Desktop\evaluationsolution\EvaluationSolution\obj\Debug\EvaluationSolution.UI.Forms.EvaluationQuestionDetail.resources
+C:\Users\Kimhong\Desktop\evaluationsolution\EvaluationSolution\obj\Debug\EvaluationSolution.UI.Forms.LoginForm.resources
+C:\Users\Kimhong\Desktop\evaluationsolution\EvaluationSolution\obj\Debug\EvaluationSolution.UI.Forms.MainForm.resources
+C:\Users\Kimhong\Desktop\evaluationsolution\EvaluationSolution\obj\Debug\EvaluationSolution.UI.Forms.RegisterCompanyForm.resources
+C:\Users\Kimhong\Desktop\evaluationsolution\EvaluationSolution\obj\Debug\EvaluationSolution.UI.MessageBox.resources
+C:\Users\Kimhong\Desktop\evaluationsolution\EvaluationSolution\obj\Debug\EvaluationSolution.UI.View.ManagementView.resources
+C:\Users\Kimhong\Desktop\evaluationsolution\EvaluationSolution\obj\Debug\EvaluationSolution.UI.View.ManagementViewControl.AddDepartmentForm.resources
+C:\Users\Kimhong\Desktop\evaluationsolution\EvaluationSolution\obj\Debug\EvaluationSolution.UI.View.ManagementViewControl.AddOfficeForm.resources
+C:\Users\Kimhong\Desktop\evaluationsolution\EvaluationSolution\obj\Debug\EvaluationSolution.UI.View.ManagementViewControl.AddStaffForm.resources
+C:\Users\Kimhong\Desktop\evaluationsolution\EvaluationSolution\obj\Debug\EvaluationSolution.UI.View.ManagementViewControl.DepartmentView.resources
+C:\Users\Kimhong\Desktop\evaluationsolution\EvaluationSolution\obj\Debug\EvaluationSolution.UI.View.ManagementViewControl.OfficeView.resources
+C:\Users\Kimhong\Desktop\evaluationsolution\EvaluationSolution\obj\Debug\EvaluationSolution.UI.View.ManagementViewControl.StaffView.resources
+C:\Users\Kimhong\Desktop\evaluationsolution\EvaluationSolution\obj\Debug\EvaluationSolution.UI.View.SettingView.resources
+C:\Users\Kimhong\Desktop\evaluationsolution\EvaluationSolution\obj\Debug\EvaluationSolution.UI.View.SettingViewControl.Evaluation.EvaluationManagement.resources
+C:\Users\Kimhong\Desktop\evaluationsolution\EvaluationSolution\obj\Debug\EvaluationSolution.UI.View.SettingViewControl.Evaluation.EvaluationQuestion.resources
+C:\Users\Kimhong\Desktop\evaluationsolution\EvaluationSolution\obj\Debug\EvaluationSolution.UI.View.SettingViewControl.Evaluation.EvaluationType.resources
+C:\Users\Kimhong\Desktop\evaluationsolution\EvaluationSolution\obj\Debug\EvaluationSolution.UI.View.SettingViewControl.UserAccount.resources
+C:\Users\Kimhong\Desktop\evaluationsolution\EvaluationSolution\obj\Debug\EvaluationSolution.UI.View.SettingViewControl.UserRole.resources
+C:\Users\Kimhong\Desktop\evaluationsolution\EvaluationSolution\obj\Debug\EvaluationSolution.csproj.GenerateResource.cache
+C:\Users\Kimhong\Desktop\evaluationsolution\EvaluationSolution\obj\Debug\EvaluationSolution.csproj.CoreCompileInputs.cache
+C:\Users\Kimhong\Desktop\evaluationsolution\EvaluationSolution\obj\Debug\EvaluationSolution.csproj.CopyComplete
+C:\Users\Kimhong\Desktop\evaluationsolution\EvaluationSolution\obj\Debug\EvaluationSolution.exe
+C:\Users\Kimhong\Desktop\evaluationsolution\EvaluationSolution\obj\Debug\EvaluationSolution.pdb
+C:\Users\Kimhong\Desktop\evaluationsolution\EvaluationSolution\obj\Debug\EvaluationSolution.UI.View.SettingViewControl.Evaluation.AddEvaluation.resources
+C:\Users\Kimhong\Desktop\evaluationsolution\EvaluationSolution\obj\Debug\EvaluationSolution.csprojAssemblyReference.cache
+C:\Users\Kimhong\Desktop\evaluationsolution\EvaluationSolution\obj\Debug\EvaluationSolution.UI.View.SettingViewControl.Evaluation.AddEvaluationControl.SelectQuestion.resources
+C:\Users\Kimhong\Desktop\evaluationsolution\EvaluationSolution\bin\Debug\EvaluationSolutionCore.exe
+C:\Users\Kimhong\Desktop\evaluationsolution\EvaluationSolution\bin\Debug\EvaluationSolutionCore.pdb
+C:\Users\Kimhong\Desktop\evaluationsolution\EvaluationSolution\bin\Debug\EvaluationSolutionCore.exe.config
+D:\My Documents\Python\Python Final Y4S1\EvaluationSolution\EvaluationSolution\bin\Debug\EvaluationSolution.exe.config
+D:\My Documents\Python\Python Final Y4S1\EvaluationSolution\EvaluationSolution\bin\Debug\EvaluationSolution.exe
+D:\My Documents\Python\Python Final Y4S1\EvaluationSolution\EvaluationSolution\bin\Debug\EvaluationSolution.pdb
+D:\My Documents\Python\Python Final Y4S1\EvaluationSolution\EvaluationSolution\bin\Debug\CrystalDecisions.CrystalReports.Engine.dll
+D:\My Documents\Python\Python Final Y4S1\EvaluationSolution\EvaluationSolution\bin\Debug\CrystalDecisions.ReportSource.dll
+D:\My Documents\Python\Python Final Y4S1\EvaluationSolution\EvaluationSolution\bin\Debug\CrystalDecisions.Shared.dll
+D:\My Documents\Python\Python Final Y4S1\EvaluationSolution\EvaluationSolution\bin\Debug\CrystalDecisions.Windows.Forms.dll
+D:\My Documents\Python\Python Final Y4S1\EvaluationSolution\EvaluationSolution\bin\Debug\FlashControlV71.dll
+D:\My Documents\Python\Python Final Y4S1\EvaluationSolution\EvaluationSolution\bin\Debug\MetroFramework.Design.dll
+D:\My Documents\Python\Python Final Y4S1\EvaluationSolution\EvaluationSolution\bin\Debug\MetroFramework.dll
+D:\My Documents\Python\Python Final Y4S1\EvaluationSolution\EvaluationSolution\bin\Debug\MetroFramework.Fonts.dll
+D:\My Documents\Python\Python Final Y4S1\EvaluationSolution\EvaluationSolution\bin\Debug\Newtonsoft.Json.dll
+D:\My Documents\Python\Python Final Y4S1\EvaluationSolution\EvaluationSolution\bin\Debug\Ninject.dll
+D:\My Documents\Python\Python Final Y4S1\EvaluationSolution\EvaluationSolution\bin\Debug\CrystalDecisions.ReportAppServer.DataDefModel.dll
+D:\My Documents\Python\Python Final Y4S1\EvaluationSolution\EvaluationSolution\bin\Debug\CrystalDecisions.ReportAppServer.ClientDoc.dll
+D:\My Documents\Python\Python Final Y4S1\EvaluationSolution\EvaluationSolution\bin\Debug\CrystalDecisions.ReportAppServer.ReportDefModel.dll
+D:\My Documents\Python\Python Final Y4S1\EvaluationSolution\EvaluationSolution\bin\Debug\CrystalDecisions.ReportAppServer.Controllers.dll
+D:\My Documents\Python\Python Final Y4S1\EvaluationSolution\EvaluationSolution\bin\Debug\CrystalDecisions.ReportAppServer.CommLayer.dll
+D:\My Documents\Python\Python Final Y4S1\EvaluationSolution\EvaluationSolution\bin\Debug\CrystalDecisions.ReportAppServer.DataSetConversion.dll
+D:\My Documents\Python\Python Final Y4S1\EvaluationSolution\EvaluationSolution\bin\Debug\CrystalDecisions.ReportAppServer.Prompting.dll
+D:\My Documents\Python\Python Final Y4S1\EvaluationSolution\EvaluationSolution\bin\Debug\CrystalDecisions.ReportAppServer.XmlSerialize.dll
+D:\My Documents\Python\Python Final Y4S1\EvaluationSolution\EvaluationSolution\bin\Debug\CrystalDecisions.ReportAppServer.CubeDefModel.dll
+D:\My Documents\Python\Python Final Y4S1\EvaluationSolution\EvaluationSolution\bin\Debug\CrystalDecisions.ReportAppServer.CommonObjectModel.dll
+D:\My Documents\Python\Python Final Y4S1\EvaluationSolution\EvaluationSolution\bin\Debug\CrystalDecisions.ReportAppServer.ObjectFactory.dll
+D:\My Documents\Python\Python Final Y4S1\EvaluationSolution\EvaluationSolution\bin\Debug\ShockwaveFlashObjects.dll
+D:\My Documents\Python\Python Final Y4S1\EvaluationSolution\EvaluationSolution\bin\Debug\CrystalDecisions.ReportAppServer.CommonControls.dll
+D:\My Documents\Python\Python Final Y4S1\EvaluationSolution\EvaluationSolution\bin\Debug\stdole.dll
+D:\My Documents\Python\Python Final Y4S1\EvaluationSolution\EvaluationSolution\bin\Debug\Newtonsoft.Json.xml
+D:\My Documents\Python\Python Final Y4S1\EvaluationSolution\EvaluationSolution\bin\Debug\Ninject.xml
+D:\My Documents\Python\Python Final Y4S1\EvaluationSolution\EvaluationSolution\obj\Debug\EvaluationSolution.Properties.Resources.resources
+D:\My Documents\Python\Python Final Y4S1\EvaluationSolution\EvaluationSolution\obj\Debug\EvaluationSolution.UI.Control.ImageButton.resources
+D:\My Documents\Python\Python Final Y4S1\EvaluationSolution\EvaluationSolution\obj\Debug\EvaluationSolution.UI.Forms.AddDailyActivities.resources
+D:\My Documents\Python\Python Final Y4S1\EvaluationSolution\EvaluationSolution\obj\Debug\EvaluationSolution.UI.Forms.DailyActivities.resources
+D:\My Documents\Python\Python Final Y4S1\EvaluationSolution\EvaluationSolution\obj\Debug\EvaluationSolution.UI.Forms.EvaluationQuestionDetail.resources
+D:\My Documents\Python\Python Final Y4S1\EvaluationSolution\EvaluationSolution\obj\Debug\EvaluationSolution.UI.Forms.LoginForm.resources
+D:\My Documents\Python\Python Final Y4S1\EvaluationSolution\EvaluationSolution\obj\Debug\EvaluationSolution.UI.Forms.MainForm.resources
+D:\My Documents\Python\Python Final Y4S1\EvaluationSolution\EvaluationSolution\obj\Debug\EvaluationSolution.UI.Forms.RegisterCompanyForm.resources
+D:\My Documents\Python\Python Final Y4S1\EvaluationSolution\EvaluationSolution\obj\Debug\EvaluationSolution.UI.MessageBox.resources
+D:\My Documents\Python\Python Final Y4S1\EvaluationSolution\EvaluationSolution\obj\Debug\EvaluationSolution.UI.View.DailyActivity.DailyActivityDetail.resources
+D:\My Documents\Python\Python Final Y4S1\EvaluationSolution\EvaluationSolution\obj\Debug\EvaluationSolution.UI.View.DailyActivity.DailyActivityView.resources
+D:\My Documents\Python\Python Final Y4S1\EvaluationSolution\EvaluationSolution\obj\Debug\EvaluationSolution.UI.View.ManagementView.resources
+D:\My Documents\Python\Python Final Y4S1\EvaluationSolution\EvaluationSolution\obj\Debug\EvaluationSolution.UI.View.ManagementViewControl.AddDepartmentForm.resources
+D:\My Documents\Python\Python Final Y4S1\EvaluationSolution\EvaluationSolution\obj\Debug\EvaluationSolution.UI.View.ManagementViewControl.AddOfficeForm.resources
+D:\My Documents\Python\Python Final Y4S1\EvaluationSolution\EvaluationSolution\obj\Debug\EvaluationSolution.UI.View.ManagementViewControl.AddStaffForm.resources
+D:\My Documents\Python\Python Final Y4S1\EvaluationSolution\EvaluationSolution\obj\Debug\EvaluationSolution.UI.View.ManagementViewControl.DepartmentView.resources
+D:\My Documents\Python\Python Final Y4S1\EvaluationSolution\EvaluationSolution\obj\Debug\EvaluationSolution.UI.View.ManagementViewControl.EvaluationView.resources
+D:\My Documents\Python\Python Final Y4S1\EvaluationSolution\EvaluationSolution\obj\Debug\EvaluationSolution.UI.View.ManagementViewControl.OfficeView.resources
+D:\My Documents\Python\Python Final Y4S1\EvaluationSolution\EvaluationSolution\obj\Debug\EvaluationSolution.UI.View.ManagementViewControl.StaffView.resources
+D:\My Documents\Python\Python Final Y4S1\EvaluationSolution\EvaluationSolution\obj\Debug\EvaluationSolution.UI.View.NotFoundView.resources
+D:\My Documents\Python\Python Final Y4S1\EvaluationSolution\EvaluationSolution\obj\Debug\EvaluationSolution.UI.View.SettingView.resources
+D:\My Documents\Python\Python Final Y4S1\EvaluationSolution\EvaluationSolution\obj\Debug\EvaluationSolution.UI.View.SettingViewControl.Evaluation.AddEvaluation.resources
+D:\My Documents\Python\Python Final Y4S1\EvaluationSolution\EvaluationSolution\obj\Debug\EvaluationSolution.UI.View.SettingViewControl.Evaluation.AddEvaluationControl.SelectQuestion.resources
+D:\My Documents\Python\Python Final Y4S1\EvaluationSolution\EvaluationSolution\obj\Debug\EvaluationSolution.UI.View.SettingViewControl.Evaluation.AddEvaluationControl.SelectStaff.resources
+D:\My Documents\Python\Python Final Y4S1\EvaluationSolution\EvaluationSolution\obj\Debug\EvaluationSolution.UI.View.SettingViewControl.Evaluation.EvaluationDetailForm.resources
+D:\My Documents\Python\Python Final Y4S1\EvaluationSolution\EvaluationSolution\obj\Debug\EvaluationSolution.UI.View.SettingViewControl.Evaluation.EvaluationManagement.resources
+D:\My Documents\Python\Python Final Y4S1\EvaluationSolution\EvaluationSolution\obj\Debug\EvaluationSolution.UI.View.SettingViewControl.Evaluation.EvaluationQuestion.resources
+D:\My Documents\Python\Python Final Y4S1\EvaluationSolution\EvaluationSolution\obj\Debug\EvaluationSolution.UI.View.SettingViewControl.Evaluation.EvaluationScore.resources
+D:\My Documents\Python\Python Final Y4S1\EvaluationSolution\EvaluationSolution\obj\Debug\EvaluationSolution.UI.View.SettingViewControl.Evaluation.EvaluationType.resources
+D:\My Documents\Python\Python Final Y4S1\EvaluationSolution\EvaluationSolution\obj\Debug\EvaluationSolution.UI.View.SettingViewControl.User_Management.EvaluatedHistroy.resources
+D:\My Documents\Python\Python Final Y4S1\EvaluationSolution\EvaluationSolution\obj\Debug\EvaluationSolution.UI.View.SettingViewControl.UserAccount.resources
+D:\My Documents\Python\Python Final Y4S1\EvaluationSolution\EvaluationSolution\obj\Debug\EvaluationSolution.UI.View.SettingViewControl.UserRole.resources
+D:\My Documents\Python\Python Final Y4S1\EvaluationSolution\EvaluationSolution\obj\Debug\EvaluationSolution.csproj.GenerateResource.cache
+D:\My Documents\Python\Python Final Y4S1\EvaluationSolution\EvaluationSolution\obj\Debug\EvaluationSolution.csproj.CoreCompileInputs.cache
+D:\My Documents\Python\Python Final Y4S1\EvaluationSolution\EvaluationSolution\obj\Debug\EvaluationSolution.csproj.CopyComplete
+D:\My Documents\Python\Python Final Y4S1\EvaluationSolution\EvaluationSolution\obj\Debug\EvaluationSolution.exe
+D:\My Documents\Python\Python Final Y4S1\EvaluationSolution\EvaluationSolution\obj\Debug\EvaluationSolution.pdb

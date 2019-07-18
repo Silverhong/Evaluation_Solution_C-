@@ -1,0 +1,491 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{A2E8BAF0-CEF2-4602-A400-C40551C34EBA}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>EvaluationSolution</RootNamespace>
+    <AssemblyName>EvaluationSolution</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="FlashControlV71, Version=1.0.3187.32366, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="MetroFramework, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="MetroFramework.Design, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="MetroFramework.Fonts, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.Fonts.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Ninject, Version=3.3.4.0, Culture=neutral, PublicKeyToken=c7192dc5380945e7, processorArchitecture=MSIL">
+      <HintPath>..\packages\Ninject.3.3.4\lib\net45\Ninject.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Messaging" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DependencyRegister.cs" />
+    <Compile Include="Entity\Department.cs" />
+    <Compile Include="Entity\Evaluation.cs" />
+    <Compile Include="Entity\EvaluationQuestion.cs" />
+    <Compile Include="Entity\EvaluationType.cs" />
+    <Compile Include="Entity\Office.cs" />
+    <Compile Include="Entity\Staff.cs" />
+    <Compile Include="Entity\User.cs" />
+    <Compile Include="Entity\UserAccount.cs" />
+    <Compile Include="Entity\UserRole.cs" />
+    <Compile Include="Entity\VAddActivity.cs" />
+    <Compile Include="Entity\VAllDailyActivity.cs" />
+    <Compile Include="Entity\VDailyActivities.cs" />
+    <Compile Include="Entity\VEvaluation.cs" />
+    <Compile Include="Entity\VEvaluationHistory.cs" />
+    <Compile Include="Entity\VEvaluationScore.cs" />
+    <Compile Include="Entity\VQuestion.cs" />
+    <Compile Include="Entity\VStaff.cs" />
+    <Compile Include="Entity\VStaffScore.cs" />
+    <Compile Include="Entity\VStaffScoreReport.cs" />
+    <Compile Include="Infrastructure\ApiExtenstion.cs" />
+    <Compile Include="Infrastructure\ContainerManager.cs" />
+    <Compile Include="Infrastructure\Module\FormModule.cs" />
+    <Compile Include="Infrastructure\Module\ViewModule.cs" />
+    <Compile Include="Infrastructure\Singleton.cs" />
+    <Compile Include="Infrastructure\StaticMessage.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UI\Control\ImageButton.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\Control\ImageButton.Designer.cs">
+      <DependentUpon>ImageButton.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Forms\AddDailyActivities.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Forms\AddDailyActivities.Designer.cs">
+      <DependentUpon>AddDailyActivities.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Forms\DailyActivities.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Forms\DailyActivities.Designer.cs">
+      <DependentUpon>DailyActivities.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Forms\EvaluationQuestionDetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Forms\EvaluationQuestionDetail.Designer.cs">
+      <DependentUpon>EvaluationQuestionDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Forms\LoginForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Forms\LoginForm.Designer.cs">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Forms\MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Forms\MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Forms\RegisterCompanyForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Forms\RegisterCompanyForm.Designer.cs">
+      <DependentUpon>RegisterCompanyForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\MessageBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\MessageBox.Designer.cs">
+      <DependentUpon>MessageBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\View\DailyActivity\DailyActivityDetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\View\DailyActivity\DailyActivityDetail.Designer.cs">
+      <DependentUpon>DailyActivityDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\View\DailyActivity\DailyActivityView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\View\DailyActivity\DailyActivityView.Designer.cs">
+      <DependentUpon>DailyActivityView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\View\MainView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\View\MainView.Designer.cs">
+      <DependentUpon>MainView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\View\ManagementView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\View\ManagementView.Designer.cs">
+      <DependentUpon>ManagementView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\View\ManagementViewControl\AddDepartmentForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\View\ManagementViewControl\AddDepartmentForm.Designer.cs">
+      <DependentUpon>AddDepartmentForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\View\ManagementViewControl\AddOfficeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\View\ManagementViewControl\AddOfficeForm.Designer.cs">
+      <DependentUpon>AddOfficeForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\View\ManagementViewControl\AddStaffForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\View\ManagementViewControl\AddStaffForm.Designer.cs">
+      <DependentUpon>AddStaffForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\View\ManagementViewControl\DepartmentView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\View\ManagementViewControl\DepartmentView.Designer.cs">
+      <DependentUpon>DepartmentView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\View\ManagementViewControl\EvaluationView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\View\ManagementViewControl\EvaluationView.Designer.cs">
+      <DependentUpon>EvaluationView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\View\ManagementViewControl\OfficeView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\View\ManagementViewControl\OfficeView.Designer.cs">
+      <DependentUpon>OfficeView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\View\ManagementViewControl\StaffView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\View\ManagementViewControl\StaffView.Designer.cs">
+      <DependentUpon>StaffView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\View\NotFoundView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\View\NotFoundView.Designer.cs">
+      <DependentUpon>NotFoundView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\View\SettingView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\View\SettingView.Designer.cs">
+      <DependentUpon>SettingView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\View\SettingViewControl\Evaluation\AddEvaluation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\View\SettingViewControl\Evaluation\AddEvaluation.Designer.cs">
+      <DependentUpon>AddEvaluation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\View\SettingViewControl\Evaluation\AddEvaluationControl\SelectQuestion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\View\SettingViewControl\Evaluation\AddEvaluationControl\SelectQuestion.Designer.cs">
+      <DependentUpon>SelectQuestion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\View\SettingViewControl\Evaluation\AddEvaluationControl\SelectStaff.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\View\SettingViewControl\Evaluation\AddEvaluationControl\SelectStaff.Designer.cs">
+      <DependentUpon>SelectStaff.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\View\SettingViewControl\Evaluation\EvaluationDetailForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\View\SettingViewControl\Evaluation\EvaluationDetailForm.Designer.cs">
+      <DependentUpon>EvaluationDetailForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\View\SettingViewControl\Evaluation\EvaluationManagement.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\View\SettingViewControl\Evaluation\EvaluationManagement.Designer.cs">
+      <DependentUpon>EvaluationManagement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\View\SettingViewControl\Evaluation\EvaluationQuestion.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\View\SettingViewControl\Evaluation\EvaluationQuestion.Designer.cs">
+      <DependentUpon>EvaluationQuestion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\View\SettingViewControl\Evaluation\EvaluationScore.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\View\SettingViewControl\Evaluation\EvaluationScore.Designer.cs">
+      <DependentUpon>EvaluationScore.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\View\SettingViewControl\Evaluation\EvaluationType.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\View\SettingViewControl\Evaluation\EvaluationType.Designer.cs">
+      <DependentUpon>EvaluationType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\View\SettingViewControl\User Management\EvaluatedHistroy.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\View\SettingViewControl\User Management\EvaluatedHistroy.Designer.cs">
+      <DependentUpon>EvaluatedHistroy.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\View\SettingViewControl\User Management\UserAccount.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\View\SettingViewControl\User Management\UserAccount.Designer.cs">
+      <DependentUpon>UserAccount.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\View\SettingViewControl\User Management\UserRole.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\View\SettingViewControl\User Management\UserRole.Designer.cs">
+      <DependentUpon>UserRole.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="UI\Control\ImageButton.resx">
+      <DependentUpon>ImageButton.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Forms\AddDailyActivities.resx">
+      <DependentUpon>AddDailyActivities.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Forms\DailyActivities.resx">
+      <DependentUpon>DailyActivities.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Forms\EvaluationQuestionDetail.resx">
+      <DependentUpon>EvaluationQuestionDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Forms\LoginForm.resx">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Forms\MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Forms\RegisterCompanyForm.resx">
+      <DependentUpon>RegisterCompanyForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\MessageBox.resx">
+      <DependentUpon>MessageBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\View\DailyActivity\DailyActivityDetail.resx">
+      <DependentUpon>DailyActivityDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\View\DailyActivity\DailyActivityView.resx">
+      <DependentUpon>DailyActivityView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\View\ManagementView.resx">
+      <DependentUpon>ManagementView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\View\ManagementViewControl\AddDepartmentForm.resx">
+      <DependentUpon>AddDepartmentForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\View\ManagementViewControl\AddOfficeForm.resx">
+      <DependentUpon>AddOfficeForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\View\ManagementViewControl\AddStaffForm.resx">
+      <DependentUpon>AddStaffForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\View\ManagementViewControl\DepartmentView.resx">
+      <DependentUpon>DepartmentView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\View\ManagementViewControl\EvaluationView.resx">
+      <DependentUpon>EvaluationView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\View\ManagementViewControl\OfficeView.resx">
+      <DependentUpon>OfficeView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\View\ManagementViewControl\StaffView.resx">
+      <DependentUpon>StaffView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\View\NotFoundView.resx">
+      <DependentUpon>NotFoundView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\View\SettingView.resx">
+      <DependentUpon>SettingView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\View\SettingViewControl\Evaluation\AddEvaluation.resx">
+      <DependentUpon>AddEvaluation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\View\SettingViewControl\Evaluation\AddEvaluationControl\SelectQuestion.resx">
+      <DependentUpon>SelectQuestion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\View\SettingViewControl\Evaluation\AddEvaluationControl\SelectStaff.resx">
+      <DependentUpon>SelectStaff.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\View\SettingViewControl\Evaluation\EvaluationDetailForm.resx">
+      <DependentUpon>EvaluationDetailForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\View\SettingViewControl\Evaluation\EvaluationManagement.resx">
+      <DependentUpon>EvaluationManagement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\View\SettingViewControl\Evaluation\EvaluationQuestion.resx">
+      <DependentUpon>EvaluationQuestion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\View\SettingViewControl\Evaluation\EvaluationScore.resx">
+      <DependentUpon>EvaluationScore.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\View\SettingViewControl\Evaluation\EvaluationType.resx">
+      <DependentUpon>EvaluationType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\View\SettingViewControl\User Management\EvaluatedHistroy.resx">
+      <DependentUpon>EvaluatedHistroy.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\View\SettingViewControl\User Management\UserAccount.resx">
+      <DependentUpon>UserAccount.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\View\SettingViewControl\User Management\UserRole.resx">
+      <DependentUpon>UserRole.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cancel_48px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\login_rounded_right_30px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_login_rounded_right_30px_2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.7.2 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_user_male_circle_filled_100px_2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_login_rounded_right_60px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\expandarror.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\expand_arrow_26px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\collapse_arrow_26px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\GreenPoint.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\past_26px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\404-01.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add_user_group_woman_man_64px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\delete_sign_64px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add_30px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\today_26px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\print_50px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

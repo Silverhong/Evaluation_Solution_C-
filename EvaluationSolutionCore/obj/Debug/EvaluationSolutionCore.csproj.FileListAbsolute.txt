@@ -1,0 +1,12 @@
+C:\Users\Kimhong\Desktop\evaluationsolution\EvaluationSolutionCore\bin\Debug\EvaluationSolutionCore.exe.config
+C:\Users\Kimhong\Desktop\evaluationsolution\EvaluationSolutionCore\bin\Debug\EvaluationSolutionCore.exe
+C:\Users\Kimhong\Desktop\evaluationsolution\EvaluationSolutionCore\bin\Debug\EvaluationSolutionCore.pdb
+C:\Users\Kimhong\Desktop\evaluationsolution\EvaluationSolutionCore\obj\Debug\EvaluationSolutionCore.csproj.CoreCompileInputs.cache
+C:\Users\Kimhong\Desktop\evaluationsolution\EvaluationSolutionCore\obj\Debug\EvaluationSolutionCore.exe
+C:\Users\Kimhong\Desktop\evaluationsolution\EvaluationSolutionCore\obj\Debug\EvaluationSolutionCore.pdb
+D:\My Documents\Python\Python Final Y4S1\EvaluationSolution\EvaluationSolutionCore\bin\Debug\EvaluationSolutionCore.exe.config
+D:\My Documents\Python\Python Final Y4S1\EvaluationSolution\EvaluationSolutionCore\bin\Debug\EvaluationSolutionCore.exe
+D:\My Documents\Python\Python Final Y4S1\EvaluationSolution\EvaluationSolutionCore\bin\Debug\EvaluationSolutionCore.pdb
+D:\My Documents\Python\Python Final Y4S1\EvaluationSolution\EvaluationSolutionCore\obj\Debug\EvaluationSolutionCore.csproj.CoreCompileInputs.cache
+D:\My Documents\Python\Python Final Y4S1\EvaluationSolution\EvaluationSolutionCore\obj\Debug\EvaluationSolutionCore.exe
+D:\My Documents\Python\Python Final Y4S1\EvaluationSolution\EvaluationSolutionCore\obj\Debug\EvaluationSolutionCore.pdb
