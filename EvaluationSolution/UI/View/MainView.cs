@@ -12,6 +12,7 @@ namespace EvaluationSolution.UI.View
 {
     public partial class MainView : UserControl
     {
+        public DataGridView DataGridView { get; set; }
         public MainView()
         {
             InitializeComponent();
@@ -19,6 +20,11 @@ namespace EvaluationSolution.UI.View
         public virtual void Init()
         {
 
+        }
+        public void ClearBoundDataGrid(DataGridView dataGridView)
+        {
+            this.DataGridView = dataGridView;
+            DataGridView.DataSource = null;
         }
     }
 }

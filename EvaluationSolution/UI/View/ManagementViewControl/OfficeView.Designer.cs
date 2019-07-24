@@ -132,6 +132,7 @@
             this.dataGridMain.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridMain.Size = new System.Drawing.Size(907, 490);
             this.dataGridMain.TabIndex = 10;
+            this.dataGridMain.DataBindingComplete += new System.Windows.Forms.DataGridViewBindingCompleteEventHandler(this.DataGridMain_DataBindingComplete);
             // 
             // OfficeView
             // 

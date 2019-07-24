@@ -105,6 +105,9 @@
     <Compile Include="Entity\VStaffScore.cs" />
     <Compile Include="Entity\VStaffScoreReport.cs" />
     <Compile Include="Infrastructure\ApiExtenstion.cs" />
+    <Compile Include="Infrastructure\ApiFunction.cs" />
+    <Compile Include="Infrastructure\ApiRouting.cs" />
+    <Compile Include="Infrastructure\ConditionSetting.cs" />
     <Compile Include="Infrastructure\ContainerManager.cs" />
     <Compile Include="Infrastructure\Module\FormModule.cs" />
     <Compile Include="Infrastructure\Module\ViewModule.cs" />

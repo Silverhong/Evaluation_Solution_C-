@@ -9,8 +9,8 @@ namespace EvaluationSolution.Entity
     public class Office
     {
         public string OfficeId { get; set; }
-        public string Officename { get; set; }
-        public string Department { get; set; }
+        public string OfficeName { get; set; }
+        public string DeptId { get; set; }
 
     }
 }

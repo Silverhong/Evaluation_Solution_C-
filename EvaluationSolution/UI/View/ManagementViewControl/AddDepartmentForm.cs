@@ -26,5 +26,16 @@ namespace EvaluationSolution.UI.View.ManagementViewControl
                 this.Dispose();
             }
         }
+
+        private void BtnSubmit_Click(object sender, EventArgs e)
+        {
+            using(ConditionSetting condition = new ConditionSetting())
+            {
+                if (condition.isInput(txtDepartmentName))
+                {
+                    MessageBox.Show("Hello");
+                }
+            }
+        }
     }
 }

@@ -12,5 +12,9 @@ namespace EvaluationSolution.Infrastructure
         public static string CancelRegisterTitle = "Cancel Registration";
         public static string CancelEditTitle = "Cancel Edit";
         public static string CancelSelectTitle = "Cancel Selection";
+        public static string ConnectionFailed = "Cannot connect to server!";
+        public static string ConnectionFailedTitle = "Connection Failure";
+        public static string TextBoxInputInvalid = "Please input information";
+        public static string TextBoxInputInvalidTitle = "Missing Information";
     }
 }

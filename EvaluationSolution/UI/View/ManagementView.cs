@@ -20,11 +20,20 @@ namespace EvaluationSolution.UI.View
         }
         private void Menu_Clicked(object sender,EventArgs e)
         {
+            if (ClearCheck((RadioButton)sender))
+                return;
             string name = ((RadioButton)sender).Text.ToLower().ToString();
             var view = Singleton.Instance.Container.Resolve<MainView>(name);
             view.Dock = DockStyle.Fill;
+            view.Init();
             panelDetail.Controls.Clear();
             panelDetail.Controls.Add(view);
+        }
+        private bool ClearCheck(RadioButton radioButton)
+        {
+            if (!radioButton.Checked)
+                return true;
+            return false;
         }
     }
 }

@@ -28,19 +28,20 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.lbCompanyName = new System.Windows.Forms.TextBox();
+            this.txtDepartmentName = new System.Windows.Forms.TextBox();
             this.metroLabel2 = new MetroFramework.Controls.MetroLabel();
             this.btnSubmit = new MetroFramework.Controls.MetroButton();
             this.btnCancel = new MetroFramework.Controls.MetroButton();
+            this.metroToolTip1 = new MetroFramework.Components.MetroToolTip();
             this.SuspendLayout();
             // 
-            // lbCompanyName
+            // txtDepartmentName
             // 
-            this.lbCompanyName.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbCompanyName.Location = new System.Drawing.Point(163, 33);
-            this.lbCompanyName.Name = "lbCompanyName";
-            this.lbCompanyName.Size = new System.Drawing.Size(227, 25);
-            this.lbCompanyName.TabIndex = 11;
+            this.txtDepartmentName.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDepartmentName.Location = new System.Drawing.Point(163, 33);
+            this.txtDepartmentName.Name = "txtDepartmentName";
+            this.txtDepartmentName.Size = new System.Drawing.Size(227, 25);
+            this.txtDepartmentName.TabIndex = 11;
             // 
             // metroLabel2
             // 
@@ -62,6 +63,7 @@
             this.btnSubmit.TabIndex = 20;
             this.btnSubmit.Text = "Submit";
             this.btnSubmit.UseSelectable = true;
+            this.btnSubmit.Click += new System.EventHandler(this.BtnSubmit_Click);
             // 
             // btnCancel
             // 
@@ -74,6 +76,12 @@
             this.btnCancel.UseSelectable = true;
             this.btnCancel.Click += new System.EventHandler(this.BtnCancel_Click);
             // 
+            // metroToolTip1
+            // 
+            this.metroToolTip1.Style = MetroFramework.MetroColorStyle.Blue;
+            this.metroToolTip1.StyleManager = null;
+            this.metroToolTip1.Theme = MetroFramework.MetroThemeStyle.Light;
+            // 
             // AddDepartmentForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -81,7 +89,7 @@
             this.ClientSize = new System.Drawing.Size(435, 146);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnSubmit);
-            this.Controls.Add(this.lbCompanyName);
+            this.Controls.Add(this.txtDepartmentName);
             this.Controls.Add(this.metroLabel2);
             this.DisplayHeader = false;
             this.MaximizeBox = false;
@@ -97,9 +105,10 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox lbCompanyName;
+        private System.Windows.Forms.TextBox txtDepartmentName;
         private MetroFramework.Controls.MetroLabel metroLabel2;
         private MetroFramework.Controls.MetroButton btnSubmit;
         private MetroFramework.Controls.MetroButton btnCancel;
+        private MetroFramework.Components.MetroToolTip metroToolTip1;
     }
 }

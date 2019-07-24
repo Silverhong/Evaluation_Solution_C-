@@ -1,4 +1,6 @@
-﻿using MetroFramework.Forms;
+﻿using EvaluationSolution.Infrastructure;
+using EvaluationSolution.UI.View;
+using MetroFramework.Forms;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -27,6 +29,15 @@ namespace EvaluationSolution.UI
             _message.ShowDialog();
             _message.Dispose();
             return _message;
+        }
+        public static void Confirm (bool status,string viewName,DataGridView dataView)
+        {
+            if (!status)
+            {
+                MessageBox.Show(StaticMessage.ConnectionFailed, StaticMessage.ConnectionFailedTitle);
+                var view = Singleton.Instance.Container.Resolve<MainView>(viewName);
+                view.ClearBoundDataGrid(dataView);
+            }
         }
 
         internal static bool Show(object staticmessage)
