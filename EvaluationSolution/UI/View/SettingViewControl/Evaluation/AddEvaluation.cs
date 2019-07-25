@@ -53,8 +53,6 @@ namespace EvaluationSolution.UI.View.SettingViewControl.Evaluation
         private void BtnAddStaff_Click_1(object sender, EventArgs e)
         {
             string[] selected = dataGridStaff.Rows.Cast<DataGridViewRow>().Select(x => x.Cells[0].Value.ToString()).ToArray();
-            SelectStaff selectStaff = new SelectStaff(selected);
-            selectStaff.ShowDialog();
         }
         private void BtnAddQuestion_Click_1(object sender, EventArgs e)
         {

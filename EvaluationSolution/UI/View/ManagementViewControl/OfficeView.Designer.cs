@@ -32,22 +32,23 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.metroButton2 = new MetroFramework.Controls.MetroButton();
+            this.btnDelete = new MetroFramework.Controls.MetroButton();
             this.btnAddOffice = new MetroFramework.Controls.MetroButton();
             this.metroTile1 = new MetroFramework.Controls.MetroTile();
             this.dataGridMain = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridMain)).BeginInit();
             this.SuspendLayout();
             // 
-            // metroButton2
+            // btnDelete
             // 
-            this.metroButton2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.metroButton2.Location = new System.Drawing.Point(792, 569);
-            this.metroButton2.Name = "metroButton2";
-            this.metroButton2.Size = new System.Drawing.Size(108, 42);
-            this.metroButton2.TabIndex = 7;
-            this.metroButton2.Text = "Add Office";
-            this.metroButton2.UseSelectable = true;
+            this.btnDelete.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnDelete.Location = new System.Drawing.Point(792, 569);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Size = new System.Drawing.Size(108, 42);
+            this.btnDelete.TabIndex = 7;
+            this.btnDelete.Text = "Delete Office";
+            this.btnDelete.UseSelectable = true;
+            this.btnDelete.Click += new System.EventHandler(this.BtnDelete_Click);
             // 
             // btnAddOffice
             // 
@@ -139,7 +140,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.dataGridMain);
-            this.Controls.Add(this.metroButton2);
+            this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.btnAddOffice);
             this.Controls.Add(this.metroTile1);
             this.Name = "OfficeView";
@@ -151,7 +152,7 @@
 
         #endregion
 
-        private MetroFramework.Controls.MetroButton metroButton2;
+        private MetroFramework.Controls.MetroButton btnDelete;
         private MetroFramework.Controls.MetroButton btnAddOffice;
         private MetroFramework.Controls.MetroTile metroTile1;
         private System.Windows.Forms.DataGridView dataGridMain;

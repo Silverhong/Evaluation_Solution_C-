@@ -8,6 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using EvaluationSolution.Entity;
+using EvaluationSolution.Infrastructure;
+
 namespace EvaluationSolution.UI.View.ManagementViewControl
 {
     public partial class StaffView : MainView
@@ -16,59 +18,11 @@ namespace EvaluationSolution.UI.View.ManagementViewControl
         {
             InitializeComponent();
             List<VStaff> listStaff = new List<VStaff>();
-            int i = 1;
-            listStaff.Add(new VStaff()
+            bool confirm = ApiRouting.GetUrl("", "", "staff", ApiFunction.GetAll).ToString().Get<VStaff>(ref listStaff);
+            if (confirm)
             {
-                ID = i + "",
-                Name = "Kimhong",
-                Address = "Phnom Penh",
-                DateOfBirth = "06/06/1999",
-                Email = "kimhongvuthy@gmail.com",
-                Gender = "Male",
-                PlaceOfBirth = "Prey Veng",
-                Position = "IT Manager",
-                Department = "Project Development"
-            });
-            i++;
-            listStaff.Add(new VStaff()
-            {
-                ID = i + "",
-                Name = "Visal",
-                Address = "Phnom Penh",
-                DateOfBirth = "06/06/1999",
-                Email = "kimhongvuthy@gmail.com",
-                Gender = "Male",
-                PlaceOfBirth = "Prey Veng",
-                Position = "Network Engineer",
-                Department = "Network"
-            });
-            i++;
-            listStaff.Add(new VStaff()
-            {
-                ID = i + "",
-                Name = "Seyla",
-                Address = "Phnom Penh",
-                DateOfBirth = "06/06/1999",
-                Email = "kimhongvuthy@gmail.com",
-                Gender = "Male",
-                PlaceOfBirth = "Prey Veng",
-                Position = "Senior Media Creator",
-                Department = "Media"
-            });
-            i++;
-            listStaff.Add(new VStaff()
-            {
-                ID = i + "",
-                Name = "Kheang",
-                Address = "Phnom Penh",
-                DateOfBirth = "06/06/1999",
-                Email = "kimhongvuthy@gmail.com",
-                Gender = "Male",
-                PlaceOfBirth = "Prey Veng",
-                Position = "Senior Network Security",
-                Department = "Network"
-            });
-            dataGridMain.DataSource = listStaff;
+                dataGridMain.DataSource = listStaff;
+            }
         }
 
         private void BtnAddStaff_Click(object sender, EventArgs e)
@@ -81,6 +35,46 @@ namespace EvaluationSolution.UI.View.ManagementViewControl
         private void DataGridMain_DataBindingComplete(object sender, DataGridViewBindingCompleteEventArgs e)
         {
             dataGridMain.ClearSelection();
+        }
+        public override void Init()
+        {
+            List<VStaff> listStaff = new List<VStaff>();
+            bool confirm = ApiRouting.GetUrl("", "", "staff", ApiFunction.GetAll).ToString().Get<VStaff>(ref listStaff);
+            if (confirm)
+            {
+                dataGridMain.DataSource = listStaff;
+                MessageBox.Confirm(confirm, "staff", dataGridMain);
+            }
+        }
+
+        private void BtnDelete_Click(object sender, EventArgs e)
+        {
+            int index = dataGridMain.CurrentCell.RowIndex;
+            string StaffId = dataGridMain.Rows[index].Cells[0].Value.ToString();
+            Staff staff = new Staff()
+            {
+                CreatedBy ="",
+                CurrentAddress = "",
+                DeptID = "",
+                Dob = "",
+                Email = "",
+                OfficeId = "",
+                Phone = "",
+                Pid = "",
+                Pob = "",
+                SName = "",
+                Sex = "",
+                UserGroupID = "",
+                StaffId = StaffId
+            };
+            string queryString = staff.GetQueryString<Staff>();
+            string url = ApiRouting.GetUrl("", "", "staff", ApiFunction.DeleteById).ToString() + queryString;
+            bool confirm = url.Detete<Staff>();
+            if (confirm)
+            {
+                MessageBox.Show("Deleted Successful", "Deleted Successful");
+                Init();
+            }
         }
     }
 }

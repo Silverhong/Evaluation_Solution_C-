@@ -37,17 +37,18 @@
             // 
             // txtDepartmentName
             // 
-            this.txtDepartmentName.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDepartmentName.Location = new System.Drawing.Point(163, 33);
+            this.txtDepartmentName.Font = new System.Drawing.Font("Khmer OS Siemreap", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDepartmentName.Location = new System.Drawing.Point(197, 43);
             this.txtDepartmentName.Name = "txtDepartmentName";
-            this.txtDepartmentName.Size = new System.Drawing.Size(227, 25);
+            this.txtDepartmentName.Size = new System.Drawing.Size(227, 37);
             this.txtDepartmentName.TabIndex = 11;
+            this.txtDepartmentName.TextChanged += new System.EventHandler(this.TxtDepartmentName_TextChanged);
             // 
             // metroLabel2
             // 
             this.metroLabel2.AutoSize = true;
             this.metroLabel2.FontWeight = MetroFramework.MetroLabelWeight.Regular;
-            this.metroLabel2.Location = new System.Drawing.Point(27, 35);
+            this.metroLabel2.Location = new System.Drawing.Point(44, 49);
             this.metroLabel2.Name = "metroLabel2";
             this.metroLabel2.Size = new System.Drawing.Size(130, 19);
             this.metroLabel2.TabIndex = 12;
@@ -57,7 +58,8 @@
             // 
             this.btnSubmit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnSubmit.DialogResult = System.Windows.Forms.DialogResult.OK;
-            this.btnSubmit.Location = new System.Drawing.Point(103, 81);
+            this.btnSubmit.Enabled = false;
+            this.btnSubmit.Location = new System.Drawing.Point(121, 117);
             this.btnSubmit.Name = "btnSubmit";
             this.btnSubmit.Size = new System.Drawing.Size(108, 42);
             this.btnSubmit.TabIndex = 20;
@@ -68,7 +70,7 @@
             // btnCancel
             // 
             this.btnCancel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnCancel.Location = new System.Drawing.Point(231, 81);
+            this.btnCancel.Location = new System.Drawing.Point(249, 117);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(108, 42);
             this.btnCancel.TabIndex = 20;
@@ -86,7 +88,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(435, 146);
+            this.ClientSize = new System.Drawing.Size(464, 196);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnSubmit);
             this.Controls.Add(this.txtDepartmentName);

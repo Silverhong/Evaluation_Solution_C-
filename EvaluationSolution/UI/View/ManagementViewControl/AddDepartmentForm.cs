@@ -1,5 +1,7 @@
-﻿using EvaluationSolution.Infrastructure;
+﻿using EvaluationSolution.Entity;
+using EvaluationSolution.Infrastructure;
 using MetroFramework.Forms;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -29,13 +31,30 @@ namespace EvaluationSolution.UI.View.ManagementViewControl
 
         private void BtnSubmit_Click(object sender, EventArgs e)
         {
-            using(ConditionSetting condition = new ConditionSetting())
+            if (MessageBox.Show($"Do you want to register department : {txtDepartmentName.Text}", "Department Register").DialogResult != DialogResult.No)
             {
-                if (condition.isInput(txtDepartmentName))
+                this.DialogResult = DialogResult.OK;
+                Department department = new Department() { DeptId = "", Deptname = txtDepartmentName.Text.Trim() };
+                string JSON = JsonConvert.SerializeObject(department);
+                string Url = ApiRouting.GetUrl("", "", "department", ApiFunction.Add).ToString();
+                bool confirm = Url.Post<Department>(JSON);
+                if (confirm)
                 {
-                    MessageBox.Show("Hello");
+                    var objDept = Singleton.Instance.Container.Resolve<MainView>("department");
+                    objDept.Init();
                 }
+                    
             }
+            else
+                this.DialogResult = DialogResult.No;
+        }
+
+        private void TxtDepartmentName_TextChanged(object sender, EventArgs e)
+        {
+            if (txtDepartmentName.TextLength > 0)
+                btnSubmit.Enabled = true;
+            else
+                btnSubmit.Enabled = false;
         }
     }
 }

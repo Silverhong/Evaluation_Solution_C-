@@ -7,12 +7,9 @@ using System.Threading.Tasks;
 
 namespace EvaluationSolution.Entity
 {
-    public class Office
+    public class VUsergroup
     {
-        [JsonIgnore]
-        public string OfficeId { get; set; }
-        public string OfficeName { get; set; }
-        public string DeptId { get; set; }
-
+        public string UserGroupID { get; set; }
+        public string Name { get; set; }
     }
 }

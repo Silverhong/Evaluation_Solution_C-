@@ -14,7 +14,8 @@ namespace EvaluationSolution.Infrastructure
 {
     public static class ApiExtenstion
     {
-        public static bool Get<T>(this string url,DataGridView dataGridView=null)
+        //Get
+        public static bool Get<T>(this string url,ref List<T> list)
         {
             try {
                 using (HttpClient client = new HttpClient())
@@ -24,19 +25,62 @@ namespace EvaluationSolution.Infrastructure
                     if (con.IsSuccessStatusCode)
                     {
                         string content = con.Content.ReadAsStringAsync().Result;
-                        dataGridView.DataSource = JsonConvert.DeserializeObject<List<T>>(content);
+                        list = JsonConvert.DeserializeObject<List<T>>(content);
                         return true;
                     }
                     return false;
                 }
-            } catch (Exception ex) {
+            } catch (Exception) {
+                return false;
+            }
+        }
+        //POST
+        public static bool Post<T>(this string url,string JSON)
+        {
+            try
+            {
+                using (HttpClient client = new HttpClient())
+                {
+                    client.BaseAddress = new Uri(url);
+                    var content = new StringContent(JSON, Encoding.UTF8, "application/json");
+                    var con = client.PostAsync(url, content).Result;
+                    if (con.IsSuccessStatusCode)
+                    {
+                        return true;
+                    }
+                    return false;
+                }
+            }
+            catch (Exception)
+            {
+                return false;
+            }
+        }
+        //DELETE
+        public static bool Detete<T>(this string url)
+        {
+            try
+            {
+                using (HttpClient client = new HttpClient())
+                {
+                    client.BaseAddress = new Uri(url);
+                    var con = client.DeleteAsync(url).Result;
+                    if (con.IsSuccessStatusCode)
+                    {
+                        return true;
+                    }
+                    return false;
+                }
+            }
+            catch (Exception)
+            {
                 return false;
             }
         }
         public static string GetQueryString<T>(this T obj)
         {
             StringBuilder sb = new StringBuilder();
-
+            sb.Append('?');
             IEnumerable data = obj as IEnumerable ?? new[] { obj };
 
             foreach (var datum in data)
@@ -47,6 +91,8 @@ namespace EvaluationSolution.Infrastructure
                 {
                     if (p.CanRead)
                     {
+                        if (p.GetValue(obj,null).ToString() == "")
+                            continue;
                         var indexes = p.GetIndexParameters();
                         if (indexes.Count() > 0)
                         {

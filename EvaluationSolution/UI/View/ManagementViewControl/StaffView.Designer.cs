@@ -35,7 +35,7 @@
             this.metroTile1 = new MetroFramework.Controls.MetroTile();
             this.dataGridMain = new System.Windows.Forms.DataGridView();
             this.btnAddStaff = new MetroFramework.Controls.MetroButton();
-            this.metroButton2 = new MetroFramework.Controls.MetroButton();
+            this.btnDelete = new MetroFramework.Controls.MetroButton();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.metroLabel2 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
@@ -130,15 +130,16 @@
             this.btnAddStaff.UseSelectable = true;
             this.btnAddStaff.Click += new System.EventHandler(this.BtnAddStaff_Click);
             // 
-            // metroButton2
+            // btnDelete
             // 
-            this.metroButton2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.metroButton2.Location = new System.Drawing.Point(792, 569);
-            this.metroButton2.Name = "metroButton2";
-            this.metroButton2.Size = new System.Drawing.Size(108, 42);
-            this.metroButton2.TabIndex = 4;
-            this.metroButton2.Text = "Delete Staff";
-            this.metroButton2.UseSelectable = true;
+            this.btnDelete.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnDelete.Location = new System.Drawing.Point(792, 569);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Size = new System.Drawing.Size(108, 42);
+            this.btnDelete.TabIndex = 4;
+            this.btnDelete.Text = "Delete Staff";
+            this.btnDelete.UseSelectable = true;
+            this.btnDelete.Click += new System.EventHandler(this.BtnDelete_Click);
             // 
             // textBox1
             // 
@@ -224,7 +225,7 @@
             this.Controls.Add(this.metroLabel1);
             this.Controls.Add(this.metroLabel2);
             this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.metroButton2);
+            this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.btnAddStaff);
             this.Controls.Add(this.metroTile1);
             this.Controls.Add(this.dataGridMain);
@@ -241,7 +242,7 @@
         private MetroFramework.Controls.MetroTile metroTile1;
         private System.Windows.Forms.DataGridView dataGridMain;
         private MetroFramework.Controls.MetroButton btnAddStaff;
-        private MetroFramework.Controls.MetroButton metroButton2;
+        private MetroFramework.Controls.MetroButton btnDelete;
         private System.Windows.Forms.TextBox textBox1;
         private MetroFramework.Controls.MetroLabel metroLabel2;
         private MetroFramework.Controls.MetroLabel metroLabel1;

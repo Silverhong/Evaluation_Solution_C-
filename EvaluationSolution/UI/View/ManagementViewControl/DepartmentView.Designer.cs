@@ -48,6 +48,7 @@
             this.btnDeleteDepartment.TabIndex = 7;
             this.btnDeleteDepartment.Text = "Delete Department";
             this.btnDeleteDepartment.UseSelectable = true;
+            this.btnDeleteDepartment.Click += new System.EventHandler(this.BtnDeleteDepartment_Click);
             // 
             // btnAddDepartment
             // 
@@ -125,7 +126,7 @@
             this.dataGridMain.RowHeadersVisible = false;
             this.dataGridMain.RowHeadersWidth = 48;
             this.dataGridMain.RowTemplate.DefaultCellStyle.BackColor = System.Drawing.Color.White;
-            this.dataGridMain.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dataGridMain.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Khmer OS Siemreap", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dataGridMain.RowTemplate.DefaultCellStyle.ForeColor = System.Drawing.Color.Black;
             this.dataGridMain.RowTemplate.DefaultCellStyle.SelectionBackColor = System.Drawing.Color.Gray;
             this.dataGridMain.RowTemplate.Height = 33;

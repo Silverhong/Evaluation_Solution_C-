@@ -19,18 +19,37 @@ namespace EvaluationSolution.UI.View.ManagementViewControl
         }
         private void BtnAddDepartment_Click(object sender, EventArgs e)
         {
-            AddDepartmentForm addDepartment = new AddDepartmentForm();
-            addDepartment.ShowDialog();
+            using (AddDepartmentForm addDepartment = new AddDepartmentForm())
+            {
+                if (addDepartment.ShowDialog() == DialogResult.OK)
+                {
+
+                }
+            }
         }
         public override void Init()
         {
-            bool status = ApiRouting.GetUrl("", "", "department", ApiFunction.GetAll).ToString().Get<Department>(dataGridMain);
-            MessageBox.Confirm(status,"department",dataGridMain);
+            List<VDepartment> list = new List<VDepartment>();
+            bool status = ApiRouting.GetUrl("", "", "department", ApiFunction.GetAll).ToString().Get<VDepartment>(ref list);
+            dataGridMain.DataSource = list;
+            MessageBox.Confirm(status, "department", dataGridMain);
         }
 
         private void DataGridMain_DataBindingComplete(object sender, DataGridViewBindingCompleteEventArgs e)
         {
             dataGridMain.ClearSelection();
+        }
+
+        private void BtnDeleteDepartment_Click(object sender, EventArgs e)
+        {
+            int index = dataGridMain.CurrentCell.RowIndex;
+            string id = dataGridMain.Rows[index].Cells[0].Value.ToString();
+            Department department = new Department() { Deptname = "", DeptId = id };
+            string QueryString = department.GetQueryString<Department>();
+            string url = ApiRouting.GetUrl("", "", "department", ApiFunction.DeleteById).ToString() + QueryString;
+            bool confirm = url.Detete<Department>();
+            if (confirm)
+                this.Init();
         }
     }
 }

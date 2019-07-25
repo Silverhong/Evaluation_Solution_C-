@@ -30,10 +30,10 @@
         {
             this.btnCancel = new MetroFramework.Controls.MetroButton();
             this.btnSubmit = new MetroFramework.Controls.MetroButton();
-            this.lbCompanyName = new System.Windows.Forms.TextBox();
+            this.txtOfficeName = new System.Windows.Forms.TextBox();
             this.metroLabel2 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.comboDepartment = new System.Windows.Forms.ComboBox();
             this.metroLabel3 = new MetroFramework.Controls.MetroLabel();
             this.SuspendLayout();
             // 
@@ -56,14 +56,15 @@
             this.btnSubmit.TabIndex = 24;
             this.btnSubmit.Text = "Submit";
             this.btnSubmit.UseSelectable = true;
+            this.btnSubmit.Click += new System.EventHandler(this.BtnSubmit_Click);
             // 
-            // lbCompanyName
+            // txtOfficeName
             // 
-            this.lbCompanyName.Font = new System.Drawing.Font("Khmer OS Siemreap", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbCompanyName.Location = new System.Drawing.Point(189, 95);
-            this.lbCompanyName.Name = "lbCompanyName";
-            this.lbCompanyName.Size = new System.Drawing.Size(246, 31);
-            this.lbCompanyName.TabIndex = 21;
+            this.txtOfficeName.Font = new System.Drawing.Font("Khmer OS Siemreap", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtOfficeName.Location = new System.Drawing.Point(189, 95);
+            this.txtOfficeName.Name = "txtOfficeName";
+            this.txtOfficeName.Size = new System.Drawing.Size(246, 31);
+            this.txtOfficeName.TabIndex = 21;
             // 
             // metroLabel2
             // 
@@ -87,14 +88,14 @@
             this.metroLabel1.TabIndex = 22;
             this.metroLabel1.Text = "Department :";
             // 
-            // comboBox1
+            // comboDepartment
             // 
-            this.comboBox1.Font = new System.Drawing.Font("Khmer OS Siemreap", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(189, 142);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(246, 32);
-            this.comboBox1.TabIndex = 25;
+            this.comboDepartment.Font = new System.Drawing.Font("Khmer OS Siemreap", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboDepartment.FormattingEnabled = true;
+            this.comboDepartment.Location = new System.Drawing.Point(189, 142);
+            this.comboDepartment.Name = "comboDepartment";
+            this.comboDepartment.Size = new System.Drawing.Size(246, 32);
+            this.comboDepartment.TabIndex = 25;
             // 
             // metroLabel3
             // 
@@ -112,11 +113,11 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(533, 297);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.comboDepartment);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnSubmit);
             this.Controls.Add(this.metroLabel1);
-            this.Controls.Add(this.lbCompanyName);
+            this.Controls.Add(this.txtOfficeName);
             this.Controls.Add(this.metroLabel3);
             this.Controls.Add(this.metroLabel2);
             this.DisplayHeader = false;
@@ -135,10 +136,10 @@
 
         private MetroFramework.Controls.MetroButton btnCancel;
         private MetroFramework.Controls.MetroButton btnSubmit;
-        private System.Windows.Forms.TextBox lbCompanyName;
+        private System.Windows.Forms.TextBox txtOfficeName;
         private MetroFramework.Controls.MetroLabel metroLabel2;
         private MetroFramework.Controls.MetroLabel metroLabel1;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox comboDepartment;
         private MetroFramework.Controls.MetroLabel metroLabel3;
     }
 }
