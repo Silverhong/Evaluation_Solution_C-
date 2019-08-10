@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Ninject.Modules;
+using EvaluationSolution.UI.View.SettingViewControl.Evaluation;
 
 namespace EvaluationSolution.Infrastructure
 {
@@ -25,6 +26,19 @@ namespace EvaluationSolution.Infrastructure
         public T Resolve<T>(string name)
         {
             return container.Get<T>(name);
+        }
+        public void Dispose<T>()
+        {
+            container.Unbind<T>();
+        }
+        public void Bind<T>()
+        {
+            container.Bind<T>().ToSelf().InSingletonScope();
+        }
+        public bool GetBinding(string name)
+        {
+            var binding = container.GetBindings(typeof(AddEvaluation)).FirstOrDefault();
+            return true;
         }
     }
 }

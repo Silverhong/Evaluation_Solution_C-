@@ -54,11 +54,15 @@
             this.metroLabel7 = new MetroFramework.Controls.MetroLabel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.metroLabel8 = new MetroFramework.Controls.MetroLabel();
-            this.metroComboBox1 = new MetroFramework.Controls.MetroComboBox();
-            this.button3 = new System.Windows.Forms.Button();
+            this.comboEvType = new MetroFramework.Controls.MetroComboBox();
+            this.btnDelete = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.btnAddQuestion = new System.Windows.Forms.Button();
             this.btnAddStaff = new System.Windows.Forms.Button();
+            this.SID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.QID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Description = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridStaff)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridQuestion)).BeginInit();
@@ -92,7 +96,6 @@
             this.btnAddNew.TabIndex = 55;
             this.btnAddNew.Text = "Submit";
             this.btnAddNew.UseSelectable = true;
-            this.btnAddNew.Click += new System.EventHandler(this.BtnAddNew_Click);
             // 
             // metroDateTime1
             // 
@@ -157,6 +160,9 @@
             this.dataGridStaff.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridStaff.ColumnHeadersHeight = 33;
             this.dataGridStaff.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            this.dataGridStaff.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.SID,
+            this.SName});
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -225,6 +231,9 @@
             this.dataGridQuestion.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle6;
             this.dataGridQuestion.ColumnHeadersHeight = 33;
             this.dataGridQuestion.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            this.dataGridQuestion.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.QID,
+            this.Description});
             dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle7.BackColor = System.Drawing.Color.White;
             dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -347,31 +356,32 @@
             this.metroLabel8.Text = "Type :";
             this.metroLabel8.UseCustomBackColor = true;
             // 
-            // metroComboBox1
+            // comboEvType
             // 
-            this.metroComboBox1.FormattingEnabled = true;
-            this.metroComboBox1.ItemHeight = 23;
-            this.metroComboBox1.Location = new System.Drawing.Point(138, 259);
-            this.metroComboBox1.Name = "metroComboBox1";
-            this.metroComboBox1.Size = new System.Drawing.Size(200, 29);
-            this.metroComboBox1.TabIndex = 61;
-            this.metroComboBox1.UseSelectable = true;
+            this.comboEvType.FormattingEnabled = true;
+            this.comboEvType.ItemHeight = 23;
+            this.comboEvType.Location = new System.Drawing.Point(138, 259);
+            this.comboEvType.Name = "comboEvType";
+            this.comboEvType.Size = new System.Drawing.Size(200, 29);
+            this.comboEvType.TabIndex = 61;
+            this.comboEvType.UseSelectable = true;
             // 
-            // button3
+            // btnDelete
             // 
-            this.button3.BackColor = System.Drawing.Color.White;
-            this.button3.FlatAppearance.BorderColor = System.Drawing.Color.Red;
-            this.button3.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.ForeColor = System.Drawing.Color.Black;
-            this.button3.Image = global::EvaluationSolution.Properties.Resources.delete_sign_64px;
-            this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button3.Location = new System.Drawing.Point(459, 325);
-            this.button3.Name = "button3";
-            this.button3.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.button3.Size = new System.Drawing.Size(159, 45);
-            this.button3.TabIndex = 62;
-            this.button3.Text = "Delete";
-            this.button3.UseVisualStyleBackColor = false;
+            this.btnDelete.BackColor = System.Drawing.Color.White;
+            this.btnDelete.FlatAppearance.BorderColor = System.Drawing.Color.Red;
+            this.btnDelete.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDelete.ForeColor = System.Drawing.Color.Black;
+            this.btnDelete.Image = global::EvaluationSolution.Properties.Resources.delete_sign_64px;
+            this.btnDelete.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnDelete.Location = new System.Drawing.Point(459, 325);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.btnDelete.Size = new System.Drawing.Size(159, 45);
+            this.btnDelete.TabIndex = 62;
+            this.btnDelete.Text = "Delete";
+            this.btnDelete.UseVisualStyleBackColor = false;
+            this.btnDelete.Click += new System.EventHandler(this.BtnDelete_Click);
             // 
             // button1
             // 
@@ -424,16 +434,40 @@
             this.btnAddStaff.UseVisualStyleBackColor = false;
             this.btnAddStaff.Click += new System.EventHandler(this.BtnAddStaff_Click_1);
             // 
+            // SID
+            // 
+            this.SID.HeaderText = "ID";
+            this.SID.Name = "SID";
+            this.SID.ReadOnly = true;
+            // 
+            // SName
+            // 
+            this.SName.HeaderText = "Name";
+            this.SName.Name = "SName";
+            this.SName.ReadOnly = true;
+            // 
+            // QID
+            // 
+            this.QID.HeaderText = "No";
+            this.QID.Name = "QID";
+            this.QID.ReadOnly = true;
+            // 
+            // Description
+            // 
+            this.Description.HeaderText = "Description";
+            this.Description.Name = "Description";
+            this.Description.ReadOnly = true;
+            // 
             // AddEvaluation
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1297, 865);
-            this.Controls.Add(this.button3);
+            this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.btnAddQuestion);
             this.Controls.Add(this.btnAddStaff);
-            this.Controls.Add(this.metroComboBox1);
+            this.Controls.Add(this.comboEvType);
             this.Controls.Add(this.metroLabel6);
             this.Controls.Add(this.metroLabel7);
             this.Controls.Add(this.metroLabel4);
@@ -455,6 +489,7 @@
             this.Padding = new System.Windows.Forms.Padding(20, 30, 20, 20);
             this.Resizable = false;
             this.Text = "AddEvaluation";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.AddEvaluation_FormClosed);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridStaff)).EndInit();
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridQuestion)).EndInit();
@@ -483,10 +518,14 @@
         private MetroFramework.Controls.MetroLabel metroLabel7;
         private System.Windows.Forms.Panel panel2;
         private MetroFramework.Controls.MetroLabel metroLabel8;
-        private MetroFramework.Controls.MetroComboBox metroComboBox1;
+        private MetroFramework.Controls.MetroComboBox comboEvType;
         private System.Windows.Forms.Button btnAddStaff;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button btnAddQuestion;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button btnDelete;
+        private System.Windows.Forms.DataGridViewTextBoxColumn SID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn SName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn QID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Description;
     }
 }

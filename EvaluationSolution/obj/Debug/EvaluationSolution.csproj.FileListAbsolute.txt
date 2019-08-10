@@ -125,8 +125,8 @@ D:\My Documents\Python\Python Final Y4S1\EvaluationSolution\EvaluationSolution\o
 D:\My Documents\Python\Python Final Y4S1\EvaluationSolution\EvaluationSolution\obj\Debug\EvaluationSolution.exe
 D:\My Documents\Python\Python Final Y4S1\EvaluationSolution\EvaluationSolution\obj\Debug\EvaluationSolution.pdb
 D:\My Documents\Python\Python Final Y4S1\EvaluationSolution\EvaluationSolution\obj\Debug\EvaluationSolution.Report.ReportForm.resources
-D:\My Documents\Python\Python Final Y4S1\EvaluationSolution\EvaluationSolution\obj\Debug\EvaluationSolution.csprojAssemblyReference.cache
 D:\My Documents\Python\Python Final Y4S1\EvaluationSolution\EvaluationSolution\obj\Debug\EvaluationSolution.UI.View.SettingViewControl.User_Management.AddUserAccount.resources
 D:\My Documents\Python\Python Final Y4S1\EvaluationSolution\EvaluationSolution\obj\Debug\EvaluationSolution.UI.View.SettingViewControl.User_Management.AddUserRole.resources
 D:\My Documents\Python\Python Final Y4S1\EvaluationSolution\EvaluationSolution\obj\Debug\EvaluationSolution.UI.View.SettingViewControl.AddType.resources
 D:\My Documents\Python\Python Final Y4S1\EvaluationSolution\EvaluationSolution\obj\Debug\EvaluationSolution.UI.View.SettingViewControl.Evaluation.AddQuestion.resources
+D:\My Documents\Python\Python Final Y4S1\EvaluationSolution\EvaluationSolution\obj\Debug\EvaluationSolution.csprojAssemblyReference.cache

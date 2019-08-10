@@ -25,7 +25,7 @@ namespace EvaluationSolution.Infrastructure
                     if (con.IsSuccessStatusCode)
                     {
                         string content = con.Content.ReadAsStringAsync().Result;
-                        list = JsonConvert.DeserializeObject<List<T>>(content);
+                        list = JsonConvert.DeserializeObject<List<T>>(content); 
                         return true;
                     }
                     return false;
@@ -46,6 +46,27 @@ namespace EvaluationSolution.Infrastructure
                     var con = client.PostAsync(url, content).Result;
                     if (con.IsSuccessStatusCode)
                     {
+                        return true;
+                    }
+                    return false;
+                }
+            }
+            catch (Exception)
+            {
+                return false;
+            }
+        }public static bool Post<T>(this string url,string JSON,ref string response)
+        {
+            try
+            {
+                using (HttpClient client = new HttpClient())
+                {
+                    client.BaseAddress = new Uri(url);
+                    var content = new StringContent(JSON, Encoding.UTF8, "application/json");
+                    var con = client.PostAsync(url, content).Result;
+                    if (con.IsSuccessStatusCode)
+                    {
+                        response = con.Content.ReadAsStringAsync().Result;
                         return true;
                     }
                     return false;

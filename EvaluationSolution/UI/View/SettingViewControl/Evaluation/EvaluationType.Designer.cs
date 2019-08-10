@@ -34,7 +34,7 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dataGridMain = new System.Windows.Forms.DataGridView();
             this.metroTile1 = new MetroFramework.Controls.MetroTile();
-            this.btnDeleteEvaluation = new MetroFramework.Controls.MetroButton();
+            this.btnDelete = new MetroFramework.Controls.MetroButton();
             this.btnAddType = new MetroFramework.Controls.MetroButton();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridMain)).BeginInit();
             this.SuspendLayout();
@@ -113,15 +113,16 @@
             this.metroTile1.UseCustomBackColor = true;
             this.metroTile1.UseSelectable = true;
             // 
-            // btnDeleteEvaluation
+            // btnDelete
             // 
-            this.btnDeleteEvaluation.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnDeleteEvaluation.Location = new System.Drawing.Point(821, 576);
-            this.btnDeleteEvaluation.Name = "btnDeleteEvaluation";
-            this.btnDeleteEvaluation.Size = new System.Drawing.Size(108, 42);
-            this.btnDeleteEvaluation.TabIndex = 41;
-            this.btnDeleteEvaluation.Text = "Delete Type";
-            this.btnDeleteEvaluation.UseSelectable = true;
+            this.btnDelete.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnDelete.Location = new System.Drawing.Point(821, 576);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Size = new System.Drawing.Size(108, 42);
+            this.btnDelete.TabIndex = 41;
+            this.btnDelete.Text = "Delete Type";
+            this.btnDelete.UseSelectable = true;
+            this.btnDelete.Click += new System.EventHandler(this.BtnDelete_Click);
             // 
             // btnAddType
             // 
@@ -141,7 +142,7 @@
             this.BackColor = System.Drawing.Color.White;
             this.Controls.Add(this.dataGridMain);
             this.Controls.Add(this.metroTile1);
-            this.Controls.Add(this.btnDeleteEvaluation);
+            this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.btnAddType);
             this.Name = "EvaluationType";
             this.Size = new System.Drawing.Size(950, 630);
@@ -153,7 +154,7 @@
         #endregion
 
         private MetroFramework.Controls.MetroTile metroTile1;
-        private MetroFramework.Controls.MetroButton btnDeleteEvaluation;
+        private MetroFramework.Controls.MetroButton btnDelete;
         private MetroFramework.Controls.MetroButton btnAddType;
         private System.Windows.Forms.DataGridView dataGridMain;
     }

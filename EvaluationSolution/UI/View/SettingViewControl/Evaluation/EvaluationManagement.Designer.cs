@@ -69,6 +69,7 @@
             this.btnDeleteEvaluation.TabIndex = 31;
             this.btnDeleteEvaluation.Text = "Delete Evaluation";
             this.btnDeleteEvaluation.UseSelectable = true;
+            this.btnDeleteEvaluation.Click += new System.EventHandler(this.BtnDeleteEvaluation_Click);
             // 
             // btnAddEvaluation
             // 

@@ -28,20 +28,20 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.lbCompanyName = new System.Windows.Forms.TextBox();
+            this.txtType = new System.Windows.Forms.TextBox();
             this.metroLabel2 = new MetroFramework.Controls.MetroLabel();
             this.btnCancel = new MetroFramework.Controls.MetroButton();
             this.btnSubmit = new MetroFramework.Controls.MetroButton();
             this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
             this.SuspendLayout();
             // 
-            // lbCompanyName
+            // txtType
             // 
-            this.lbCompanyName.Font = new System.Drawing.Font("Khmer OS Siemreap", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbCompanyName.Location = new System.Drawing.Point(131, 82);
-            this.lbCompanyName.Name = "lbCompanyName";
-            this.lbCompanyName.Size = new System.Drawing.Size(287, 42);
-            this.lbCompanyName.TabIndex = 23;
+            this.txtType.Font = new System.Drawing.Font("Khmer OS Siemreap", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtType.Location = new System.Drawing.Point(131, 82);
+            this.txtType.Name = "txtType";
+            this.txtType.Size = new System.Drawing.Size(287, 42);
+            this.txtType.TabIndex = 23;
             // 
             // metroLabel2
             // 
@@ -74,6 +74,7 @@
             this.btnSubmit.TabIndex = 26;
             this.btnSubmit.Text = "Submit";
             this.btnSubmit.UseSelectable = true;
+            this.btnSubmit.Click += new System.EventHandler(this.BtnSubmit_Click);
             // 
             // metroLabel1
             // 
@@ -93,7 +94,7 @@
             this.ClientSize = new System.Drawing.Size(501, 221);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnSubmit);
-            this.Controls.Add(this.lbCompanyName);
+            this.Controls.Add(this.txtType);
             this.Controls.Add(this.metroLabel1);
             this.Controls.Add(this.metroLabel2);
             this.DisplayHeader = false;
@@ -110,7 +111,7 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox lbCompanyName;
+        private System.Windows.Forms.TextBox txtType;
         private MetroFramework.Controls.MetroLabel metroLabel2;
         private MetroFramework.Controls.MetroButton btnCancel;
         private MetroFramework.Controls.MetroButton btnSubmit;

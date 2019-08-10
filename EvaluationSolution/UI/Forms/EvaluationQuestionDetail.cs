@@ -1,4 +1,5 @@
-﻿using EvaluationSolution.Infrastructure;
+﻿using EvaluationSolution.Entity;
+using EvaluationSolution.Infrastructure;
 using MetroFramework.Forms;
 using System;
 using System.Collections.Generic;
@@ -14,9 +15,20 @@ namespace EvaluationSolution.UI.Forms
 {
     public partial class EvaluationQuestionDetail : MetroForm
     {
-        public EvaluationQuestionDetail(string EvQId)
+        List<VEvaluationQuestionDetail> listEvQD;
+        public EvaluationQuestionDetail(string EvQId,string Question)
         {
             InitializeComponent();
+            listEvQD = new List<VEvaluationQuestionDetail>();
+            string url = ApiRouting.GetUrl("", "", "evaluationQuestionDetail", ApiFunction.GetById).ToString()+"?EvQId="+EvQId;
+            bool confirm = url.Get<Entity.VEvaluationQuestionDetail>(ref listEvQD);
+            if (confirm)
+            {
+                txtAnswer.Text=listEvQD[0].Answer;   
+                txtMaxScore.Text=listEvQD[0].MaxScore+"";   
+                txtMinScore.Text=listEvQD[0].MinScore+"";
+                txtQuestion.Text = Question;
+            }
         }
 
         private void BtnEdit_Click(object sender, EventArgs e)

@@ -35,7 +35,7 @@
             this.dataGridMain = new System.Windows.Forms.DataGridView();
             this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
             this.btnCancel = new MetroFramework.Controls.MetroButton();
-            this.btnAddNew = new MetroFramework.Controls.MetroButton();
+            this.btnSubmit = new MetroFramework.Controls.MetroButton();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridMain)).BeginInit();
             this.SuspendLayout();
             // 
@@ -119,15 +119,16 @@
             this.btnCancel.UseSelectable = true;
             this.btnCancel.Click += new System.EventHandler(this.BtnCancel_Click);
             // 
-            // btnAddNew
+            // btnSubmit
             // 
-            this.btnAddNew.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnAddNew.Location = new System.Drawing.Point(631, 548);
-            this.btnAddNew.Name = "btnAddNew";
-            this.btnAddNew.Size = new System.Drawing.Size(108, 42);
-            this.btnAddNew.TabIndex = 57;
-            this.btnAddNew.Text = "Submit";
-            this.btnAddNew.UseSelectable = true;
+            this.btnSubmit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnSubmit.Location = new System.Drawing.Point(631, 548);
+            this.btnSubmit.Name = "btnSubmit";
+            this.btnSubmit.Size = new System.Drawing.Size(108, 42);
+            this.btnSubmit.TabIndex = 57;
+            this.btnSubmit.Text = "Submit";
+            this.btnSubmit.UseSelectable = true;
+            this.btnSubmit.Click += new System.EventHandler(this.BtnSubmit_Click);
             // 
             // SelectQuestion
             // 
@@ -135,7 +136,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(909, 605);
             this.Controls.Add(this.btnCancel);
-            this.Controls.Add(this.btnAddNew);
+            this.Controls.Add(this.btnSubmit);
             this.Controls.Add(this.metroLabel1);
             this.Controls.Add(this.dataGridMain);
             this.DisplayHeader = false;
@@ -153,6 +154,6 @@
         private System.Windows.Forms.DataGridView dataGridMain;
         private MetroFramework.Controls.MetroLabel metroLabel1;
         private MetroFramework.Controls.MetroButton btnCancel;
-        private MetroFramework.Controls.MetroButton btnAddNew;
+        private MetroFramework.Controls.MetroButton btnSubmit;
     }
 }

@@ -8,31 +8,34 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using EvaluationSolution.UI.Forms;
+using EvaluationSolution.Infrastructure;
 
 namespace EvaluationSolution.UI.View.SettingViewControl.Evaluation
 {
     public partial class EvaluationQuestion : MainView
     {
+        List<Entity.VEvaluationQuestion> listEvQ;
         public EvaluationQuestion()
         {
             InitializeComponent();
-            List<Entity.EvaluationQuestion> listEvQ = new List<Entity.EvaluationQuestion>();
-            listEvQ.Add(new Entity.EvaluationQuestion()
-            {
-                EvQId = "001",
-                CreatedDate = "24/06/2019",
-                EvQDescription = "How often is they come to work ?",
-                StaffId = "GG"
-            });
-            dataGridMain.DataSource = listEvQ.Select(x=>new { ID = x.EvQId, Created_Date = x.CreatedDate, Description = x.EvQDescription, Created_By = x.StaffId }).ToList();
-
+            listEvQ = new List<Entity.VEvaluationQuestion>();
         }
-
+        public override void Init()
+        {
+            string url = ApiRouting.GetUrl("", "", "evaluationQuestion", ApiFunction.GetAll).ToString();
+            bool confirm = url.Get<Entity.VEvaluationQuestion>(ref listEvQ);
+            if (confirm)
+            {
+                dataGridMain.DataSource = listEvQ;
+                
+            }
+        }
         private void DataGridMain_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
             int row = dataGridMain.CurrentCell.RowIndex;
             string EvQId = dataGridMain[0, row].Value.ToString();
-            EvaluationQuestionDetail evQDetail = new EvaluationQuestionDetail(EvQId);
+            string Question = dataGridMain[2, row].Value.ToString();
+            EvaluationQuestionDetail evQDetail = new EvaluationQuestionDetail(EvQId,Question);
             evQDetail.ShowDialog();
         }
 
@@ -45,6 +48,27 @@ namespace EvaluationSolution.UI.View.SettingViewControl.Evaluation
         {
             AddQuestion addQuestion = new AddQuestion();
             addQuestion.ShowDialog();
+        }
+
+        private void BtnDelete_Click(object sender, EventArgs e)
+        {
+            int index = dataGridMain.CurrentCell.RowIndex;
+            string id = dataGridMain.Rows[index].Cells[0].Value.ToString();
+            Entity.EvaluationQuestion evaluationQuestion = new Entity.EvaluationQuestion()
+            {
+                CreatedDate = "",
+                EvQDescription = "",
+                EvQId = id,
+                StaffId = ""
+            };
+            string queryString = evaluationQuestion.GetQueryString();
+            string url = ApiRouting.GetUrl("", "", "evaluationQuestion", ApiFunction.DeleteById).ToString() + queryString;
+            bool confirm = url.Detete<Entity.EvaluationQuestion>();
+            if (confirm)
+            {
+                Init();
+                MessageBox.Show("Operation Successful");
+            }
         }
     }
 }

@@ -9,5 +9,7 @@ namespace EvaluationSolution.Entity
     public static class GlobalVariable
     {
         public static string LoginStaffName { get; set; } = "testing";
+        public static string CompanyId { get; set; } = "1";
+        public static string StaffID { get; set; } = "4";
     }
 }
