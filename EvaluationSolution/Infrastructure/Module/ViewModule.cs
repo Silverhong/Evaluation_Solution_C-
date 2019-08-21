@@ -29,6 +29,8 @@ namespace EvaluationSolution.Infrastructure.Module
             Bind<MainView>().To<EvaluationView>().InSingletonScope().Named("evaluation");
             Bind<MainView>().To<DailyActivityView>().InSingletonScope().Named("daily activity");
             Bind<MainView>().To<EvaluationScore>().InSingletonScope().Named("evaluation score");
+            Bind<MainView>().To<PositionView>().InSingletonScope().Named("position");
+            Bind<MainView>().To<GroupView>().InSingletonScope().Named("group");
         }
     }
 }

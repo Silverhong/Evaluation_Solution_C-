@@ -91,6 +91,7 @@
     <Compile Include="Entity\EvaluationQuestionDetail.cs" />
     <Compile Include="Entity\EvaluationType.cs" />
     <Compile Include="Entity\GlobalVariable.cs" />
+    <Compile Include="Entity\Group.cs" />
     <Compile Include="Entity\Office.cs" />
     <Compile Include="Entity\Position.cs" />
     <Compile Include="Entity\Staff.cs" />
@@ -108,6 +109,7 @@
     <Compile Include="Entity\VEvaluationQuestionDetail.cs" />
     <Compile Include="Entity\VEvaluationScore.cs" />
     <Compile Include="Entity\VEvaluationType.cs" />
+    <Compile Include="Entity\VGroup.cs" />
     <Compile Include="Entity\VOffice.cs" />
     <Compile Include="Entity\VPosition.cs" />
     <Compile Include="Entity\VQuestion.cs" />
@@ -217,11 +219,23 @@
     <Compile Include="UI\View\ManagementViewControl\AddDepartmentForm.Designer.cs">
       <DependentUpon>AddDepartmentForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="UI\View\ManagementViewControl\AddGroup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\View\ManagementViewControl\AddGroup.Designer.cs">
+      <DependentUpon>AddGroup.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI\View\ManagementViewControl\AddOfficeForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="UI\View\ManagementViewControl\AddOfficeForm.Designer.cs">
       <DependentUpon>AddOfficeForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\View\ManagementViewControl\AddPosition.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\View\ManagementViewControl\AddPosition.Designer.cs">
+      <DependentUpon>AddPosition.cs</DependentUpon>
     </Compile>
     <Compile Include="UI\View\ManagementViewControl\AddStaffForm.cs">
       <SubType>Form</SubType>
@@ -241,11 +255,23 @@
     <Compile Include="UI\View\ManagementViewControl\EvaluationView.Designer.cs">
       <DependentUpon>EvaluationView.cs</DependentUpon>
     </Compile>
+    <Compile Include="UI\View\ManagementViewControl\GroupView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\View\ManagementViewControl\GroupView.Designer.cs">
+      <DependentUpon>GroupView.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI\View\ManagementViewControl\OfficeView.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="UI\View\ManagementViewControl\OfficeView.Designer.cs">
       <DependentUpon>OfficeView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\View\ManagementViewControl\PositionView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\View\ManagementViewControl\PositionView.Designer.cs">
+      <DependentUpon>PositionView.cs</DependentUpon>
     </Compile>
     <Compile Include="UI\View\ManagementViewControl\StaffView.cs">
       <SubType>UserControl</SubType>
@@ -408,8 +434,14 @@
     <EmbeddedResource Include="UI\View\ManagementViewControl\AddDepartmentForm.resx">
       <DependentUpon>AddDepartmentForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UI\View\ManagementViewControl\AddGroup.resx">
+      <DependentUpon>AddGroup.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UI\View\ManagementViewControl\AddOfficeForm.resx">
       <DependentUpon>AddOfficeForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\View\ManagementViewControl\AddPosition.resx">
+      <DependentUpon>AddPosition.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\View\ManagementViewControl\AddStaffForm.resx">
       <DependentUpon>AddStaffForm.cs</DependentUpon>
@@ -420,8 +452,14 @@
     <EmbeddedResource Include="UI\View\ManagementViewControl\EvaluationView.resx">
       <DependentUpon>EvaluationView.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UI\View\ManagementViewControl\GroupView.resx">
+      <DependentUpon>GroupView.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UI\View\ManagementViewControl\OfficeView.resx">
       <DependentUpon>OfficeView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\View\ManagementViewControl\PositionView.resx">
+      <DependentUpon>PositionView.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\View\ManagementViewControl\StaffView.resx">
       <DependentUpon>StaffView.cs</DependentUpon>

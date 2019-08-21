@@ -30,7 +30,8 @@ namespace EvaluationSolution.UI.View.ManagementViewControl
         public override void Init()
         {
             List<VDepartment> list = new List<VDepartment>();
-            bool status = ApiRouting.GetUrl("", "", "department", ApiFunction.GetAll).ToString().Get<VDepartment>(ref list);
+            string url = ApiRouting.GetUrl("", "", "department", ApiFunction.GetAll).ToString();
+            bool status = url.Get<VDepartment>(ref list);
             dataGridMain.DataSource = list;
             MessageBox.Confirm(status, "department", dataGridMain);
         }

@@ -31,6 +31,8 @@
             this.panelDetail = new System.Windows.Forms.Panel();
             this.rbtnStaff = new System.Windows.Forms.RadioButton();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.rbtnGroup = new System.Windows.Forms.RadioButton();
+            this.rbtnPosition = new System.Windows.Forms.RadioButton();
             this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
             this.rbtnOffice = new System.Windows.Forms.RadioButton();
             this.rbtnDepartment = new System.Windows.Forms.RadioButton();
@@ -72,6 +74,8 @@
             | System.Windows.Forms.AnchorStyles.Left)));
             this.panel1.BackColor = System.Drawing.Color.White;
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.rbtnGroup);
+            this.panel1.Controls.Add(this.rbtnPosition);
             this.panel1.Controls.Add(this.metroLabel1);
             this.panel1.Controls.Add(this.rbtnOffice);
             this.panel1.Controls.Add(this.rbtnDepartment);
@@ -80,6 +84,42 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(255, 681);
             this.panel1.TabIndex = 4;
+            // 
+            // rbtnGroup
+            // 
+            this.rbtnGroup.Appearance = System.Windows.Forms.Appearance.Button;
+            this.rbtnGroup.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.rbtnGroup.FlatAppearance.BorderSize = 0;
+            this.rbtnGroup.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.rbtnGroup.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbtnGroup.ForeColor = System.Drawing.Color.White;
+            this.rbtnGroup.Location = new System.Drawing.Point(-1, 314);
+            this.rbtnGroup.Name = "rbtnGroup";
+            this.rbtnGroup.Size = new System.Drawing.Size(256, 55);
+            this.rbtnGroup.TabIndex = 7;
+            this.rbtnGroup.TabStop = true;
+            this.rbtnGroup.Text = "Group";
+            this.rbtnGroup.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.rbtnGroup.UseVisualStyleBackColor = false;
+            this.rbtnGroup.CheckedChanged += new System.EventHandler(this.Menu_Clicked);
+            // 
+            // rbtnPosition
+            // 
+            this.rbtnPosition.Appearance = System.Windows.Forms.Appearance.Button;
+            this.rbtnPosition.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.rbtnPosition.FlatAppearance.BorderSize = 0;
+            this.rbtnPosition.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.rbtnPosition.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbtnPosition.ForeColor = System.Drawing.Color.White;
+            this.rbtnPosition.Location = new System.Drawing.Point(-1, 262);
+            this.rbtnPosition.Name = "rbtnPosition";
+            this.rbtnPosition.Size = new System.Drawing.Size(256, 55);
+            this.rbtnPosition.TabIndex = 7;
+            this.rbtnPosition.TabStop = true;
+            this.rbtnPosition.Text = "Position";
+            this.rbtnPosition.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.rbtnPosition.UseVisualStyleBackColor = false;
+            this.rbtnPosition.CheckedChanged += new System.EventHandler(this.Menu_Clicked);
             // 
             // metroLabel1
             // 
@@ -155,5 +195,7 @@
         private System.Windows.Forms.RadioButton rbtnOffice;
         private System.Windows.Forms.RadioButton rbtnDepartment;
         private MetroFramework.Controls.MetroLabel metroLabel1;
+        private System.Windows.Forms.RadioButton rbtnGroup;
+        private System.Windows.Forms.RadioButton rbtnPosition;
     }
 }

@@ -130,3 +130,7 @@ D:\My Documents\Python\Python Final Y4S1\EvaluationSolution\EvaluationSolution\o
 D:\My Documents\Python\Python Final Y4S1\EvaluationSolution\EvaluationSolution\obj\Debug\EvaluationSolution.UI.View.SettingViewControl.AddType.resources
 D:\My Documents\Python\Python Final Y4S1\EvaluationSolution\EvaluationSolution\obj\Debug\EvaluationSolution.UI.View.SettingViewControl.Evaluation.AddQuestion.resources
 D:\My Documents\Python\Python Final Y4S1\EvaluationSolution\EvaluationSolution\obj\Debug\EvaluationSolution.csprojAssemblyReference.cache
+D:\My Documents\Python\Python Final Y4S1\EvaluationSolution\EvaluationSolution\obj\Debug\EvaluationSolution.UI.View.ManagementViewControl.PositionView.resources
+D:\My Documents\Python\Python Final Y4S1\EvaluationSolution\EvaluationSolution\obj\Debug\EvaluationSolution.UI.View.ManagementViewControl.GroupView.resources
+D:\My Documents\Python\Python Final Y4S1\EvaluationSolution\EvaluationSolution\obj\Debug\EvaluationSolution.UI.View.ManagementViewControl.AddGroup.resources
+D:\My Documents\Python\Python Final Y4S1\EvaluationSolution\EvaluationSolution\obj\Debug\EvaluationSolution.UI.View.ManagementViewControl.AddPosition.resources
