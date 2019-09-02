@@ -87,7 +87,8 @@
             this.txtCompany.CustomButton.UseSelectable = true;
             this.txtCompany.CustomButton.Visible = false;
             this.txtCompany.FontSize = MetroFramework.MetroTextBoxSize.Tall;
-            this.txtCompany.Lines = new string[0];
+            this.txtCompany.Lines = new string[] {
+        "SETEC"};
             this.txtCompany.Location = new System.Drawing.Point(147, 202);
             this.txtCompany.MaxLength = 32767;
             this.txtCompany.Name = "txtCompany";
@@ -99,6 +100,7 @@
             this.txtCompany.ShortcutsEnabled = true;
             this.txtCompany.Size = new System.Drawing.Size(229, 35);
             this.txtCompany.TabIndex = 2;
+            this.txtCompany.Text = "SETEC";
             this.txtCompany.UseSelectable = true;
             this.txtCompany.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.txtCompany.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
@@ -118,7 +120,8 @@
             this.txtUsername.CustomButton.UseSelectable = true;
             this.txtUsername.CustomButton.Visible = false;
             this.txtUsername.FontSize = MetroFramework.MetroTextBoxSize.Tall;
-            this.txtUsername.Lines = new string[0];
+            this.txtUsername.Lines = new string[] {
+        "Silverhong"};
             this.txtUsername.Location = new System.Drawing.Point(147, 106);
             this.txtUsername.MaxLength = 32767;
             this.txtUsername.Name = "txtUsername";
@@ -130,6 +133,7 @@
             this.txtUsername.ShortcutsEnabled = true;
             this.txtUsername.Size = new System.Drawing.Size(229, 35);
             this.txtUsername.TabIndex = 0;
+            this.txtUsername.Text = "Silverhong";
             this.txtUsername.UseSelectable = true;
             this.txtUsername.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.txtUsername.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
@@ -149,7 +153,8 @@
             this.txtPassword.CustomButton.UseSelectable = true;
             this.txtPassword.CustomButton.Visible = false;
             this.txtPassword.FontSize = MetroFramework.MetroTextBoxSize.Tall;
-            this.txtPassword.Lines = new string[0];
+            this.txtPassword.Lines = new string[] {
+        "123"};
             this.txtPassword.Location = new System.Drawing.Point(147, 154);
             this.txtPassword.MaxLength = 32767;
             this.txtPassword.Name = "txtPassword";
@@ -161,6 +166,7 @@
             this.txtPassword.ShortcutsEnabled = true;
             this.txtPassword.Size = new System.Drawing.Size(229, 35);
             this.txtPassword.TabIndex = 1;
+            this.txtPassword.Text = "123";
             this.txtPassword.UseSelectable = true;
             this.txtPassword.UseSystemPasswordChar = true;
             this.txtPassword.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
@@ -247,6 +253,7 @@
             this.Padding = new System.Windows.Forms.Padding(20, 30, 20, 20);
             this.Resizable = false;
             this.Text = "LoginForm";
+            this.Load += new System.EventHandler(this.LoginForm_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);

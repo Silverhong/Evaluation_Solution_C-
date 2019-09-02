@@ -34,6 +34,49 @@ namespace EvaluationSolution.Infrastructure
                 return false;
             }
         }
+        public static bool Get<T>(this string url,ref string respond)
+        {
+            try
+            {
+                using (HttpClient client = new HttpClient())
+                {
+                    client.BaseAddress = new Uri(url);
+                    var con = client.GetAsync(url).Result;
+                    if (con.IsSuccessStatusCode)
+                    {
+                        respond = con.Content.ReadAsStringAsync().Result;
+                        return true;
+                    }
+                    return false;
+                }
+            }
+            catch (Exception)
+            {
+                return false;
+            }
+        }
+        public static bool GetDeserializeObject<T>(this string url, ref T obj)
+        {
+            try
+            {
+                using (HttpClient client = new HttpClient())
+                {
+                    client.BaseAddress = new Uri(url);
+                    var con = client.GetAsync(url).Result;
+                    if (con.IsSuccessStatusCode)
+                    {
+                        string content = con.Content.ReadAsStringAsync().Result;
+                        obj = JsonConvert.DeserializeObject<T>(content);
+                        return true;
+                    }
+                    return false;
+                }
+            }
+            catch (Exception)
+            {
+                return false;
+            }
+        }
         //POST
         public static bool Post<T>(this string url,string JSON)
         {
@@ -44,7 +87,7 @@ namespace EvaluationSolution.Infrastructure
                     client.BaseAddress = new Uri(url);
                     var content = new StringContent(JSON, Encoding.UTF8, "application/json");
                     var con = client.PostAsync(url, content).Result;
-                    if (con.IsSuccessStatusCode)
+                     if (con.IsSuccessStatusCode)
                     {
                         return true;
                     }

@@ -85,8 +85,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DependencyRegister.cs" />
+    <Compile Include="Entity\AssignScore.cs" />
+    <Compile Include="Entity\AssignScoreDetail.cs" />
+    <Compile Include="Entity\AssignStaff.cs" />
     <Compile Include="Entity\Department.cs" />
     <Compile Include="Entity\Evaluation.cs" />
+    <Compile Include="Entity\EvaluationDetail.cs" />
     <Compile Include="Entity\EvaluationQuestion.cs" />
     <Compile Include="Entity\EvaluationQuestionDetail.cs" />
     <Compile Include="Entity\EvaluationType.cs" />
@@ -94,6 +98,7 @@
     <Compile Include="Entity\Group.cs" />
     <Compile Include="Entity\Office.cs" />
     <Compile Include="Entity\Position.cs" />
+    <Compile Include="Entity\RegisterCompany.cs" />
     <Compile Include="Entity\Staff.cs" />
     <Compile Include="Entity\User.cs" />
     <Compile Include="Entity\UserAccount.cs" />
@@ -104,7 +109,12 @@
     <Compile Include="Entity\VDailyActivities.cs" />
     <Compile Include="Entity\VDepartment.cs" />
     <Compile Include="Entity\VEvaluation.cs" />
+    <Compile Include="Entity\VEvaluationDetail.cs" />
+    <Compile Include="Entity\VEvaluationDetailStaff.cs" />
     <Compile Include="Entity\VEvaluationHistory.cs" />
+    <Compile Include="Entity\VEvaluationOnStaff.cs" />
+    <Compile Include="Entity\VEvaluationOnStaffQuestion.cs" />
+    <Compile Include="Entity\VEvaluationOnStaffStaff.cs" />
     <Compile Include="Entity\VEvaluationQuestion.cs" />
     <Compile Include="Entity\VEvaluationQuestionDetail.cs" />
     <Compile Include="Entity\VEvaluationScore.cs" />
@@ -284,6 +294,12 @@
     </Compile>
     <Compile Include="UI\View\NotFoundView.Designer.cs">
       <DependentUpon>NotFoundView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\View\NoView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\View\NoView.Designer.cs">
+      <DependentUpon>NoView.cs</DependentUpon>
     </Compile>
     <Compile Include="UI\View\SettingView.cs">
       <SubType>UserControl</SubType>
@@ -466,6 +482,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UI\View\NotFoundView.resx">
       <DependentUpon>NotFoundView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\View\NoView.resx">
+      <DependentUpon>NoView.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\View\SettingView.resx">
       <DependentUpon>SettingView.cs</DependentUpon>

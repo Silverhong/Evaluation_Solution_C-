@@ -33,7 +33,18 @@ namespace EvaluationSolution.UI.Forms
                 tTime.Start();
                 if (login.ShowDialog() == DialogResult.OK)
                 {
-
+                    lbLoginAs.Text = GlobalVariable.LoginStaffName;
+                    if (GlobalVariable.Role.ToLower() == "staff")
+                    {
+                        rbtnSetting.Visible = false;
+                        rbtnDailyActivity.Visible = false;
+                        rbnManagement.Visible = false;
+                    }
+                    else if (GlobalVariable.Role.ToLower() == "manager")
+                    {
+                        rbtnSetting.Visible = false;
+                        rbnManagement.Visible = false;
+                    }
                 }
                 else
                     Environment.Exit(1);

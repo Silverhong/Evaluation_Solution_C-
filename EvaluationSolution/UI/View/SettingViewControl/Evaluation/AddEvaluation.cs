@@ -2,6 +2,7 @@
 using EvaluationSolution.Infrastructure;
 using EvaluationSolution.UI.View.SettingViewControl.Evaluation.AddEvaluationControl;
 using MetroFramework.Forms;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -23,7 +24,7 @@ namespace EvaluationSolution.UI.View.SettingViewControl.Evaluation
             string url = ApiRouting.GetUrl("", "", "evaluationType", ApiFunction.GetAll).ToString();
             bool confirm = url.Get<VEvaluationType>(ref listEvaType);
             if (confirm)
-                comboEvType.DataSource = listEvaType.Select(x => x.EvTName).ToList();
+                comboType.DataSource = listEvaType.Select(x => x.EvTName).ToList();
         }
         private void BtnCancel_Click(object sender, EventArgs e)
         {
@@ -71,6 +72,70 @@ namespace EvaluationSolution.UI.View.SettingViewControl.Evaluation
         {
             Singleton.Instance.Container.Dispose<AddEvaluation>();
             Singleton.Instance.Container.Bind<AddEvaluation>();
+        }
+        private void BtnSubmit_Click(object sender, EventArgs e)
+        {
+            bool AssignStaffConfirm, EvDConfirm, confirm;
+            string desc = txtDescription.Text;
+            string fromDate = dtFromDate.Value.Date.ToShortDateString();
+            string toDate = dtToDate.Value.Date.ToShortDateString();
+            string type = comboType.SelectedItem.ToString();
+            string evTypeId = listEvaType[comboType.SelectedIndex].EvTId;
+            string createdDate = DateTime.Now.Date.ToShortDateString();
+            string status = "Active";
+            Entity.Evaluation ev = new Entity.Evaluation()
+            {
+                CreatedDate = createdDate,
+                EvDescription = desc,
+                EvId = "",
+                EvTId = evTypeId,
+                FromDate = fromDate,
+                StaffId = GlobalVariable.StaffID,
+                Status = status,
+                ToDate = toDate
+            };
+            string json = JsonConvert.SerializeObject(ev);
+            string evId = "";
+            string url = ApiRouting.GetUrl("", "", "evaluation", ApiFunction.Add).ToString();
+            confirm = url.Post<Entity.Evaluation>(json,ref evId);
+            if (confirm)
+            {
+                List<EvaluationDetail> listEvD = new List<EvaluationDetail>();
+                foreach (DataGridViewRow dtr in dataGridQuestion.Rows)
+                {
+                    listEvD.Add(new EvaluationDetail()
+                    {
+                        CreatedDate = DateTime.Now.Date.ToShortDateString(),
+                        EvId = evId,
+                        EvQId = dtr.Cells[0].Value.ToString()
+                    });
+                }
+                string EvDJson = JsonConvert.SerializeObject(listEvD);
+                string EvDUrl = ApiRouting.GetUrl("", "", "evaluationDetail", ApiFunction.Add).ToString();
+                EvDConfirm = EvDUrl.Post<EvaluationDetail>(EvDJson);
+                List<AssignStaff> listAStaff = new List<AssignStaff>();
+                foreach (DataGridViewRow dtr in dataGridStaff.Rows)
+                {
+                    listAStaff.Add(new AssignStaff()
+                    {
+                        Aid="",
+                        Description="",
+                        EvID=evId,
+                        StaffId=dtr.Cells[0].Value.ToString(),
+                        Status="Active"
+                    });
+                }
+                string AssignStaffJson = JsonConvert.SerializeObject(listAStaff);
+                string AssignUrl = ApiRouting.GetUrl("", "", "assignstaff", ApiFunction.Add).ToString();
+                AssignStaffConfirm = AssignUrl.Post<AssignStaff>(AssignStaffJson);
+                if (EvDConfirm && AssignStaffConfirm)
+                {
+                    MessageBox.Show("Operation Successful!");
+                    var obj = Singleton.Instance.Container.Resolve<MainView>("evaluation management");
+                    obj.Init();
+                    this.Dispose();
+                }
+            }
         }
     }
 }

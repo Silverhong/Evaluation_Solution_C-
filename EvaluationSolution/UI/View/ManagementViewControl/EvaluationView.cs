@@ -10,6 +10,8 @@ using System.Windows.Forms;
 using EvaluationSolution.Entity;
 using EvaluationSolution.UI.View.SettingViewControl.User_Management;
 using EvaluationSolution.UI.Forms;
+using EvaluationSolution.Infrastructure;
+using Newtonsoft.Json;
 
 namespace EvaluationSolution.UI.View.ManagementViewControl
 {
@@ -21,26 +23,38 @@ namespace EvaluationSolution.UI.View.ManagementViewControl
         private int lastRow = 0;
         bool isAlreadyTotal = false;
         bool isColoredTotal = false;
+        private VEvaluationOnStaff VEvaluationOnStaff;
         public EvaluationView()
         {
             InitializeComponent();
+            VEvaluationOnStaff = new VEvaluationOnStaff();
+            string url = ApiRouting.GetUrl("", "", "evaluation", ApiFunction.GetByStaffId).ToString() + "?StaffId=" + GlobalVariable.StaffID;
+            bool confirm = url.GetDeserializeObject<VEvaluationOnStaff>(ref VEvaluationOnStaff);
+            if (confirm)
+            {
+                lbDescription.Text = VEvaluationOnStaff.EvaDescription;
+                dt.Columns.Add(new DataColumn() { ReadOnly = true, ColumnName = "ចំណុចត្រូវវាយតម្លៃ" });
+                dataGridMain.DataSource = dt;
+                int id = 1;
+                foreach (var obj in VEvaluationOnStaff.Questions)
+                {
+                    dt.Rows.Add(id + "." + obj.Description);
+                    id++;
+                }
+                foreach (var obj in VEvaluationOnStaff.Staff)
+                {
+                    dt.Columns.Add(new DataColumn() { ColumnName = obj.id, DataType = typeof(string), AllowDBNull = true });
+                }
+                dt.Rows.Add("Total");
+                //dataGridMain.AutoGenerateColumns = true;
+                ConfigureDataGrid();
+            }
+            else
+            {
+                panel3.Controls.Clear();
+                panel3.Controls.Add(new NoView() { Dock = DockStyle.Fill });
+            }
             
-            dt.Columns.Add(new DataColumn() { ReadOnly = true, ColumnName = "ចំណុចត្រូវវាយតម្លៃ"});
-            dataGridMain.DataSource = dt;
-            dt.Rows.Add("១- ការគោរពវិន័យ និងគោលការណ៍ការងារ");
-            dt.Rows.Add("២- វត្តមាន និងការមកធ្វើការទៀងពេលវេលា");
-            dt.Rows.Add("១- ការគោរពវិន័យ និងគោលការណ៍ការងារ");
-            dt.Rows.Add("២- វត្តមាន និងការមកធ្វើការទៀងពេលវេលា");
-            dt.Rows.Add("១- ការគោរពវិន័យ និងគោលការណ៍ការងារ");
-            dt.Rows.Add("២- វត្តមាន និងការមកធ្វើការទៀងពេលវេលា");
-            dt.Rows.Add("១- ការគោរពវិន័យ និងគោលការណ៍ការងារ");
-            dt.Rows.Add("២- វត្តមាន និងការមកធ្វើការទៀងពេលវេលា");
-            dt.Rows.Add("១- ការគោរពវិន័យ និងគោលការណ៍ការងារ");
-            for (int i = 1; i <= 11; i++)
-                dt.Columns.Add(new DataColumn() { ColumnName = i.ToString("0000"), DataType = typeof(string), AllowDBNull=true});
-            dt.Rows.Add("Total");
-            //dataGridMain.AutoGenerateColumns = true;
-            ConfigureDataGrid();
         }
         public void ConfigureDataGrid()
         {
@@ -184,16 +198,56 @@ namespace EvaluationSolution.UI.View.ManagementViewControl
                 }
             }
         }
-
-        private void EvaluationView_Load(object sender, EventArgs e)
-        {
-
-        }
-
         private void BtnDailyActivities_Click(object sender, EventArgs e)
         {
             DailyActivities dailyActivities = new DailyActivities();
             dailyActivities.ShowDialog();
+        }
+        private void BtnSubmit_Click(object sender, EventArgs e)
+        {
+            List<AssignScore> listAssignScore = new List<AssignScore>();
+            if (MessageBox.Show("Do you want to submit your evaluation ?","Confirmation").DialogResult == DialogResult.No)
+            {
+                return;
+            }
+            string AssignScoreId = "";
+            AssignScore assignScore = new AssignScore();
+            foreach(DataGridViewColumn dtc in dataGridMain.Columns)
+            {
+                if (dtc.Index == 0)
+                    continue;
+                assignScore = new AssignScore();
+                assignScore.Date = DateTime.Now.Date.ToShortDateString();
+                assignScore.AssignScoreId = "";
+                assignScore.AvgScore = "0";
+                assignScore.ByAssignId = VEvaluationOnStaff.AssignId;
+                assignScore.ForAssignId = VEvaluationOnStaff.Staff[dtc.Index-1].assignId;
+                assignScore.ListAssignScoreDetails = new List<AssignScoreDetail>();
+                foreach(DataGridViewRow dtr in dataGridMain.Rows)
+                {
+                    if (dtr.Index == dataGridMain.RowCount-1)
+                        break;
+                    if (dtr.Cells[dtc.Index].Value == null || dtr.Cells[dtc.Index].Value.ToString() == "")
+                    {
+                        MessageBox.Show("Please fill all information!");
+                        return;
+                    }
+                    assignScore.ListAssignScoreDetails.Add(new Entity.AssignScoreDetail()
+                    {
+                        AssignScoreDetailId = "",
+                        AssignScoreId = AssignScoreId,
+                        EvQId = VEvaluationOnStaff.Questions[dtr.Index].EvQId,
+                        Score = dtr.Cells[dtc.Index].Value.ToString()
+                    });
+                }
+                listAssignScore.Add(assignScore);
+            }
+            string json = JsonConvert.SerializeObject(listAssignScore);
+            string url = ApiRouting.GetUrl("", "", "assignscore", ApiFunction.Add).ToString();
+            string respond = "";
+            bool confirm = url.Post<AssignScore>(json,ref respond);
+            if (respond.ToLower() == "successful")
+                MessageBox.Show("Evaluation submitted successful");
         }
     }
 }

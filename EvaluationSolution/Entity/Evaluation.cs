@@ -12,11 +12,11 @@ namespace EvaluationSolution.Entity
         [JsonIgnore]
         public string EvId { get; set; }
         public string EvDescription { get; set; }
-        public string fromDate { get; set; }
-        public string toDate { get; set; }
+        public string FromDate { get; set; }
+        public string ToDate { get; set; }
         public string CreatedDate { get; set; }
         public string StaffId { get; set; }
         public string Status { get; set; }
-
+        public string EvTId {get;set;}
     }
 }

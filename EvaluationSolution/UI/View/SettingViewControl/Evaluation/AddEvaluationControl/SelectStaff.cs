@@ -46,7 +46,7 @@ namespace EvaluationSolution.UI.View.SettingViewControl.Evaluation.AddEvaluation
         private void BtnSubmit_Click(object sender, EventArgs e)
         {
             List<VStaff> newList = new List<VStaff>();
-            int i = 1;
+            int i = 0;
             foreach (DataGridViewRow obj in dataGridMain.Rows)
             {
                 bool confirm = obj.Cells["Selected"].Value == null ? false : (bool)obj.Cells["Selected"].Value;
@@ -54,14 +54,16 @@ namespace EvaluationSolution.UI.View.SettingViewControl.Evaluation.AddEvaluation
                 {
                     newList.Add(new VStaff()
                     {
-                        StaffId = obj.Cells[0].Value.ToString(),
-                        Sname = obj.Cells[1].Value.ToString(),
-                        OfficeId = obj.Cells[2].Value.ToString(),
-                        DeptId = obj.Cells[3].Value.ToString(),
+                        StaffId = listStaff[i].StaffId,
+                        Sname = obj.Cells[1].Value.ToString()
                     });
+                    i++;
                 }
                 else
+                {
+                    i++;
                     continue;
+                }
             }
             obj.AddToDatagridStaff(newList);
             this.Close();

@@ -60,7 +60,8 @@ namespace EvaluationSolution.UI.View.SettingViewControl
                 StaffId = "",
                 Status = "",
                 Username = "",
-                UserId = id
+                UserId = id,
+                Role=""
             };
             string queryString = user.GetQueryString<User>();
             string url = ApiRouting.GetUrl("", "", "user", ApiFunction.DeleteById).ToString() + queryString;

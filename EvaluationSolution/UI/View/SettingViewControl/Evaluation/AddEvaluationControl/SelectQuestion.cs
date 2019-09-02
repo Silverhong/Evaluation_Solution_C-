@@ -63,20 +63,24 @@ namespace EvaluationSolution.UI.View.SettingViewControl.Evaluation.AddEvaluation
         private void BtnSubmit_Click(object sender, EventArgs e)
         {
             List<Entity.VEvaluationQuestion> newList = new List<VEvaluationQuestion>();
-            int i = 1;
-            foreach(DataGridViewRow obj in dataGridMain.Rows)
+            int i = 0;
+            foreach (DataGridViewRow obj in dataGridMain.Rows)
             {
-                bool confirm = obj.Cells["Selected"].Value==null?false:(bool)obj.Cells["Selected"].Value;
-                if (confirm )
+                bool confirm = obj.Cells["Selected"].Value == null ? false : (bool)obj.Cells["Selected"].Value;
+                if (confirm)
                 {
                     newList.Add(new VEvaluationQuestion()
                     {
-                        EvQId = i++.ToString(),
+                        EvQId = listEvQ[i].EvQId,
                         EvQDescription = obj.Cells[1].Value.ToString()
-                    });
+                    }); 
+                    i++;
                 }
                 else
+                {
+                    i++;
                     continue;
+                }
             }
             obj.AddToDatagridQuestion(newList);
             this.Close();

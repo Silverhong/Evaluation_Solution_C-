@@ -19,6 +19,7 @@ namespace EvaluationSolution.UI.View.SettingViewControl.User_Management
         List<VDepartment> listDepartment;
         List<VOffice> listOffice;
         List<VStaff> listStaff;
+        List<UserRole> listRole;
         public AddUserAccount()
         {
             InitializeComponent();
@@ -26,6 +27,8 @@ namespace EvaluationSolution.UI.View.SettingViewControl.User_Management
             bool conDepartment = ApiRouting.GetUrl("", "", "department", ApiFunction.GetAll).ToString().Get<VDepartment>(ref listDepartment);
             bool conOffice = ApiRouting.GetUrl("", "", "office", ApiFunction.GetAll).ToString().Get<VOffice>(ref listOffice);
             bool conStaff = ApiRouting.GetUrl("", "", "staff", ApiFunction.GetAll).ToString().Get<VStaff>(ref listStaff);
+            bool conRole = ApiRouting.GetUrl("", "", "usergroup", ApiFunction.GetAll).ToString().Get<UserRole>(ref listRole);
+            comboRole.DataSource = listRole.Select(x => x.Name).ToList();
             comboStaff.DataSource = listStaff.Select(x =>x.Sname).ToList();
             comboDepartment.DataSource = listDepartment.Select(x => x.Deptname).ToList();
             comboOffice.DataSource = listOffice.Select(x => x.OfficeName).ToList();
@@ -47,6 +50,7 @@ namespace EvaluationSolution.UI.View.SettingViewControl.User_Management
             string status = "Active";
             string staffName = comboStaff.SelectedItem.ToString();
             string staffId = listStaff.Where(x => x.Sname == staffName).Select(x => x.StaffId).FirstOrDefault();
+            string role = comboRole.SelectedItem.ToString();
             User user = new User()
             {
                 Created_date = createdDate,
@@ -54,7 +58,8 @@ namespace EvaluationSolution.UI.View.SettingViewControl.User_Management
                 Regcom_id = regcom_id,
                 Status = status,
                 StaffId = staffId,
-                Username = username
+                Username = username,
+                Role = role
             };
             string json = JsonConvert.SerializeObject(user);
             string url = ApiRouting.GetUrl("", "", "user", ApiFunction.Add).ToString();

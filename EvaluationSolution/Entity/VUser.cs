@@ -15,5 +15,6 @@ namespace EvaluationSolution.Entity
         public string Created_date { get; set; }
         public string Status { get; set; }
         public string StaffId { get; set; }
+        public string Role { get; set; }
     }
 }

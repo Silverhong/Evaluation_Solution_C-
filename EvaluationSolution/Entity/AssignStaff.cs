@@ -7,16 +7,13 @@ using System.Threading.Tasks;
 
 namespace EvaluationSolution.Entity
 {
-    public class User
+    public class AssignStaff
     {
         [JsonIgnore]
-        public string UserId { get; set; }
-        public string Regcom_id { get; set; }
-        public string Username { get; set; }
-        public string Password { get; set; }
-        public string Created_date { get; set; }
+        public string Aid { get; set; }
         public string Status { get; set; }
+        public string Description { get; set; }
+        public string EvID { get; set; }
         public string StaffId { get; set; }
-        public string Role { get; set; }
     }
 }

@@ -6,10 +6,9 @@ using System.Threading.Tasks;
 
 namespace EvaluationSolution.Entity
 {
-    public class VEvaluationQuestion
+    public class VEvaluationOnStaffQuestion
     {
         public string EvQId { get; set; }
-        public string CreatedDate { get; set; }
-        public string EvQDescription { get; set; }
+        public string Description { get; set; }
     }
 }

@@ -44,6 +44,8 @@
             this.comboDepartment = new MetroFramework.Controls.MetroComboBox();
             this.metroLabel6 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel7 = new MetroFramework.Controls.MetroLabel();
+            this.metroLabel8 = new MetroFramework.Controls.MetroLabel();
+            this.comboRole = new System.Windows.Forms.ComboBox();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -53,7 +55,7 @@
             this.metroLabel1.BackColor = System.Drawing.Color.Transparent;
             this.metroLabel1.FontSize = MetroFramework.MetroLabelSize.Tall;
             this.metroLabel1.FontWeight = MetroFramework.MetroLabelWeight.Regular;
-            this.metroLabel1.Location = new System.Drawing.Point(126, 131);
+            this.metroLabel1.Location = new System.Drawing.Point(126, 177);
             this.metroLabel1.Name = "metroLabel1";
             this.metroLabel1.Size = new System.Drawing.Size(96, 25);
             this.metroLabel1.TabIndex = 19;
@@ -66,7 +68,7 @@
             this.metroLabel2.BackColor = System.Drawing.Color.Transparent;
             this.metroLabel2.FontSize = MetroFramework.MetroLabelSize.Tall;
             this.metroLabel2.FontWeight = MetroFramework.MetroLabelWeight.Regular;
-            this.metroLabel2.Location = new System.Drawing.Point(122, 82);
+            this.metroLabel2.Location = new System.Drawing.Point(122, 128);
             this.metroLabel2.Name = "metroLabel2";
             this.metroLabel2.Size = new System.Drawing.Size(100, 25);
             this.metroLabel2.TabIndex = 20;
@@ -79,7 +81,7 @@
             this.metroLabel3.BackColor = System.Drawing.Color.Transparent;
             this.metroLabel3.FontSize = MetroFramework.MetroLabelSize.Tall;
             this.metroLabel3.FontWeight = MetroFramework.MetroLabelWeight.Regular;
-            this.metroLabel3.Location = new System.Drawing.Point(63, 180);
+            this.metroLabel3.Location = new System.Drawing.Point(63, 226);
             this.metroLabel3.Name = "metroLabel3";
             this.metroLabel3.Size = new System.Drawing.Size(159, 25);
             this.metroLabel3.TabIndex = 19;
@@ -89,7 +91,7 @@
             // txtUsername
             // 
             this.txtUsername.Font = new System.Drawing.Font("Khmer OS Siemreap", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtUsername.Location = new System.Drawing.Point(237, 79);
+            this.txtUsername.Location = new System.Drawing.Point(237, 125);
             this.txtUsername.Name = "txtUsername";
             this.txtUsername.Size = new System.Drawing.Size(274, 37);
             this.txtUsername.TabIndex = 51;
@@ -97,7 +99,7 @@
             // txtPass
             // 
             this.txtPass.Font = new System.Drawing.Font("Khmer OS Siemreap", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPass.Location = new System.Drawing.Point(237, 127);
+            this.txtPass.Location = new System.Drawing.Point(237, 173);
             this.txtPass.Name = "txtPass";
             this.txtPass.Size = new System.Drawing.Size(274, 37);
             this.txtPass.TabIndex = 51;
@@ -106,7 +108,7 @@
             // txtConPass
             // 
             this.txtConPass.Font = new System.Drawing.Font("Khmer OS Siemreap", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtConPass.Location = new System.Drawing.Point(237, 175);
+            this.txtConPass.Location = new System.Drawing.Point(237, 221);
             this.txtConPass.Name = "txtConPass";
             this.txtConPass.Size = new System.Drawing.Size(274, 37);
             this.txtConPass.TabIndex = 51;
@@ -143,7 +145,7 @@
             this.metroButton4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.metroButton4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.metroButton4.ForeColor = System.Drawing.Color.White;
-            this.metroButton4.Location = new System.Drawing.Point(360, 427);
+            this.metroButton4.Location = new System.Drawing.Point(360, 470);
             this.metroButton4.Name = "metroButton4";
             this.metroButton4.Size = new System.Drawing.Size(139, 44);
             this.metroButton4.TabIndex = 57;
@@ -157,7 +159,7 @@
             this.btnSubmit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnSubmit.BackColor = System.Drawing.Color.Green;
             this.btnSubmit.ForeColor = System.Drawing.Color.White;
-            this.btnSubmit.Location = new System.Drawing.Point(198, 427);
+            this.btnSubmit.Location = new System.Drawing.Point(198, 470);
             this.btnSubmit.Name = "btnSubmit";
             this.btnSubmit.Size = new System.Drawing.Size(145, 44);
             this.btnSubmit.TabIndex = 58;
@@ -169,17 +171,19 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.comboRole);
             this.groupBox1.Controls.Add(this.comboStaff);
             this.groupBox1.Controls.Add(this.txtConPass);
             this.groupBox1.Controls.Add(this.txtPass);
             this.groupBox1.Controls.Add(this.txtUsername);
             this.groupBox1.Controls.Add(this.metroLabel3);
+            this.groupBox1.Controls.Add(this.metroLabel8);
             this.groupBox1.Controls.Add(this.metroLabel1);
             this.groupBox1.Controls.Add(this.metroLabel5);
             this.groupBox1.Controls.Add(this.metroLabel2);
             this.groupBox1.Location = new System.Drawing.Point(38, 156);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(591, 244);
+            this.groupBox1.Size = new System.Drawing.Size(591, 287);
             this.groupBox1.TabIndex = 59;
             this.groupBox1.TabStop = false;
             // 
@@ -239,11 +243,34 @@
             this.metroLabel7.Text = "Department :";
             this.metroLabel7.UseCustomBackColor = true;
             // 
+            // metroLabel8
+            // 
+            this.metroLabel8.AutoSize = true;
+            this.metroLabel8.BackColor = System.Drawing.Color.Transparent;
+            this.metroLabel8.FontSize = MetroFramework.MetroLabelSize.Tall;
+            this.metroLabel8.FontWeight = MetroFramework.MetroLabelWeight.Regular;
+            this.metroLabel8.Location = new System.Drawing.Point(165, 79);
+            this.metroLabel8.Name = "metroLabel8";
+            this.metroLabel8.Size = new System.Drawing.Size(55, 25);
+            this.metroLabel8.TabIndex = 20;
+            this.metroLabel8.Text = "Role :";
+            this.metroLabel8.UseCustomBackColor = true;
+            // 
+            // comboRole
+            // 
+            this.comboRole.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Append;
+            this.comboRole.Font = new System.Drawing.Font("Khmer OS Siemreap", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboRole.FormattingEnabled = true;
+            this.comboRole.Location = new System.Drawing.Point(237, 75);
+            this.comboRole.Name = "comboRole";
+            this.comboRole.Size = new System.Drawing.Size(274, 37);
+            this.comboRole.TabIndex = 64;
+            // 
             // AddUserAccount
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(665, 494);
+            this.ClientSize = new System.Drawing.Size(665, 537);
             this.Controls.Add(this.comboOffice);
             this.Controls.Add(this.comboDepartment);
             this.Controls.Add(this.metroLabel6);
@@ -284,5 +311,7 @@
         private MetroFramework.Controls.MetroLabel metroLabel6;
         private MetroFramework.Controls.MetroLabel metroLabel7;
         private System.Windows.Forms.ComboBox comboStaff;
+        private System.Windows.Forms.ComboBox comboRole;
+        private MetroFramework.Controls.MetroLabel metroLabel8;
     }
 }

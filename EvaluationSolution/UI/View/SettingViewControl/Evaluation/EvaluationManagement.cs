@@ -35,7 +35,9 @@ namespace EvaluationSolution.UI.View.SettingViewControl.Evaluation
 
         private void DataGridMain_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            EvaluationDetailForm evaluationDetailForm = new EvaluationDetailForm();
+            int index = dataGridMain.CurrentCell.RowIndex;
+            string id = dataGridMain.Rows[index].Cells[0].Value.ToString();
+            EvaluationDetailForm evaluationDetailForm = new EvaluationDetailForm(id);
             evaluationDetailForm.ShowDialog();
         }
         public override void Init()
@@ -90,7 +92,8 @@ namespace EvaluationSolution.UI.View.SettingViewControl.Evaluation
                 fromDate = "",
                 StaffId = "",
                 Status = "",
-                toDate=""
+                toDate="",
+                EvTId=""
             };
             string queryString = vEvaluation.GetQueryString();
             string url = ApiRouting.GetUrl("", "", "evaluation", ApiFunction.DeleteById).ToString() + queryString;

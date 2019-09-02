@@ -8,37 +8,28 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using EvaluationSolution.UI.View.SettingViewControl.User_Management;
+using EvaluationSolution.Infrastructure;
+using EvaluationSolution.Entity;
 
 namespace EvaluationSolution.UI.View.SettingViewControl
 {
     public partial class UserRole : MainView
     {
+        List<VUsergroup> listRole;
         public UserRole()
         {
             InitializeComponent();
-            List<Entity.UserRole> listUserRole = new List<Entity.UserRole>();
-            listUserRole.Add(new Entity.UserRole()
-            {
-                UserGroupID = "001",
-                Name = "Staff"
-            });
-            listUserRole.Add(new Entity.UserRole()
-            {
-                UserGroupID = "002",
-                Name = "Manager"
-            });
-            listUserRole.Add(new Entity.UserRole()
-            {
-                UserGroupID = "003",
-                Name = "Admin"
-            });
-            DataGridMain.DataSource = listUserRole.Select(x => new { ID = x.UserGroupID, Role = x.Name }).ToList();
-            lbTotal.Text = listUserRole.Count.ToString();
         }
-
+        public override void Init()
+        {
+            listRole = new List<VUsergroup>();
+            bool conRole = ApiRouting.GetUrl("", "", "usergroup", ApiFunction.GetAll).ToString().Get<VUsergroup>(ref listRole);
+            if (conRole)
+                DataGridMain.DataSource = listRole;
+        }
         private void DataGridMain_DataBindingComplete(object sender, DataGridViewBindingCompleteEventArgs e)
         {
-            DataGridMain.ClearSelection();
+            //DataGridMain.ClearSelection();
         }
 
         private void BtnAddRole_Click(object sender, EventArgs e)

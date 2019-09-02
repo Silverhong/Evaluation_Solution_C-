@@ -30,7 +30,7 @@
         {
             this.btnCancel = new MetroFramework.Controls.MetroButton();
             this.btnSubmit = new MetroFramework.Controls.MetroButton();
-            this.lbCompanyName = new System.Windows.Forms.TextBox();
+            this.txtRole = new System.Windows.Forms.TextBox();
             this.metroLabel2 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel3 = new MetroFramework.Controls.MetroLabel();
@@ -74,14 +74,15 @@
             this.btnSubmit.TabIndex = 24;
             this.btnSubmit.Text = "Submit";
             this.btnSubmit.UseSelectable = true;
+            this.btnSubmit.Click += new System.EventHandler(this.BtnSubmit_Click);
             // 
-            // lbCompanyName
+            // txtRole
             // 
-            this.lbCompanyName.Font = new System.Drawing.Font("Khmer OS Siemreap", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbCompanyName.Location = new System.Drawing.Point(241, 49);
-            this.lbCompanyName.Name = "lbCompanyName";
-            this.lbCompanyName.Size = new System.Drawing.Size(227, 42);
-            this.lbCompanyName.TabIndex = 21;
+            this.txtRole.Font = new System.Drawing.Font("Khmer OS Siemreap", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtRole.Location = new System.Drawing.Point(241, 49);
+            this.txtRole.Name = "txtRole";
+            this.txtRole.Size = new System.Drawing.Size(227, 42);
+            this.txtRole.TabIndex = 21;
             // 
             // metroLabel2
             // 
@@ -338,7 +339,7 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnSubmit);
-            this.Controls.Add(this.lbCompanyName);
+            this.Controls.Add(this.txtRole);
             this.Controls.Add(this.metroLabel2);
             this.DisplayHeader = false;
             this.MaximizeBox = false;
@@ -347,6 +348,7 @@
             this.Padding = new System.Windows.Forms.Padding(20, 30, 20, 20);
             this.Resizable = false;
             this.Text = "AddUserRole";
+            this.Load += new System.EventHandler(this.AddUserRole_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);
@@ -358,7 +360,7 @@
 
         private MetroFramework.Controls.MetroButton btnCancel;
         private MetroFramework.Controls.MetroButton btnSubmit;
-        private System.Windows.Forms.TextBox lbCompanyName;
+        private System.Windows.Forms.TextBox txtRole;
         private MetroFramework.Controls.MetroLabel metroLabel2;
         private MetroFramework.Controls.MetroLabel metroLabel1;
         private MetroFramework.Controls.MetroLabel metroLabel3;

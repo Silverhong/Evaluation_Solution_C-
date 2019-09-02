@@ -37,15 +37,19 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             this.btnCancel = new MetroFramework.Controls.MetroButton();
-            this.metroDateTime2 = new MetroFramework.Controls.MetroDateTime();
-            this.btnAddNew = new MetroFramework.Controls.MetroButton();
-            this.metroDateTime1 = new MetroFramework.Controls.MetroDateTime();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.dtToDate = new MetroFramework.Controls.MetroDateTime();
+            this.btnSubmit = new MetroFramework.Controls.MetroButton();
+            this.dtFromDate = new MetroFramework.Controls.MetroDateTime();
+            this.txtDescription = new System.Windows.Forms.TextBox();
             this.lbCompanyName = new System.Windows.Forms.TextBox();
             this.metroLabel5 = new MetroFramework.Controls.MetroLabel();
             this.dataGridStaff = new System.Windows.Forms.DataGridView();
+            this.SID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1 = new System.Windows.Forms.Panel();
             this.dataGridQuestion = new System.Windows.Forms.DataGridView();
+            this.QID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Description = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel2 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel3 = new MetroFramework.Controls.MetroLabel();
@@ -54,15 +58,11 @@
             this.metroLabel7 = new MetroFramework.Controls.MetroLabel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.metroLabel8 = new MetroFramework.Controls.MetroLabel();
-            this.comboEvType = new MetroFramework.Controls.MetroComboBox();
+            this.comboType = new MetroFramework.Controls.MetroComboBox();
             this.btnDelete = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.btnAddQuestion = new System.Windows.Forms.Button();
             this.btnAddStaff = new System.Windows.Forms.Button();
-            this.SID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.SName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.QID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Description = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridStaff)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridQuestion)).BeginInit();
@@ -79,40 +79,41 @@
             this.btnCancel.UseSelectable = true;
             this.btnCancel.Click += new System.EventHandler(this.BtnCancel_Click);
             // 
-            // metroDateTime2
+            // dtToDate
             // 
-            this.metroDateTime2.Location = new System.Drawing.Point(418, 205);
-            this.metroDateTime2.MinimumSize = new System.Drawing.Size(0, 29);
-            this.metroDateTime2.Name = "metroDateTime2";
-            this.metroDateTime2.Size = new System.Drawing.Size(200, 29);
-            this.metroDateTime2.TabIndex = 56;
+            this.dtToDate.Location = new System.Drawing.Point(418, 205);
+            this.dtToDate.MinimumSize = new System.Drawing.Size(0, 29);
+            this.dtToDate.Name = "dtToDate";
+            this.dtToDate.Size = new System.Drawing.Size(200, 29);
+            this.dtToDate.TabIndex = 56;
             // 
-            // btnAddNew
+            // btnSubmit
             // 
-            this.btnAddNew.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnAddNew.Location = new System.Drawing.Point(1043, 14);
-            this.btnAddNew.Name = "btnAddNew";
-            this.btnAddNew.Size = new System.Drawing.Size(108, 42);
-            this.btnAddNew.TabIndex = 55;
-            this.btnAddNew.Text = "Submit";
-            this.btnAddNew.UseSelectable = true;
+            this.btnSubmit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnSubmit.Location = new System.Drawing.Point(1043, 14);
+            this.btnSubmit.Name = "btnSubmit";
+            this.btnSubmit.Size = new System.Drawing.Size(108, 42);
+            this.btnSubmit.TabIndex = 55;
+            this.btnSubmit.Text = "Submit";
+            this.btnSubmit.UseSelectable = true;
+            this.btnSubmit.Click += new System.EventHandler(this.BtnSubmit_Click);
             // 
-            // metroDateTime1
+            // dtFromDate
             // 
-            this.metroDateTime1.Location = new System.Drawing.Point(138, 205);
-            this.metroDateTime1.MinimumSize = new System.Drawing.Size(0, 29);
-            this.metroDateTime1.Name = "metroDateTime1";
-            this.metroDateTime1.Size = new System.Drawing.Size(200, 29);
-            this.metroDateTime1.TabIndex = 57;
+            this.dtFromDate.Location = new System.Drawing.Point(138, 205);
+            this.dtFromDate.MinimumSize = new System.Drawing.Size(0, 29);
+            this.dtFromDate.Name = "dtFromDate";
+            this.dtFromDate.Size = new System.Drawing.Size(200, 29);
+            this.dtFromDate.TabIndex = 57;
             // 
-            // textBox1
+            // txtDescription
             // 
-            this.textBox1.Font = new System.Drawing.Font("Khmer OS Siemreap", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(139, 137);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(479, 52);
-            this.textBox1.TabIndex = 49;
+            this.txtDescription.Font = new System.Drawing.Font("Khmer OS Siemreap", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDescription.Location = new System.Drawing.Point(139, 137);
+            this.txtDescription.Multiline = true;
+            this.txtDescription.Name = "txtDescription";
+            this.txtDescription.Size = new System.Drawing.Size(479, 52);
+            this.txtDescription.TabIndex = 49;
             // 
             // lbCompanyName
             // 
@@ -194,13 +195,25 @@
             this.dataGridStaff.Size = new System.Drawing.Size(583, 681);
             this.dataGridStaff.TabIndex = 47;
             // 
+            // SID
+            // 
+            this.SID.HeaderText = "ID";
+            this.SID.Name = "SID";
+            this.SID.ReadOnly = true;
+            // 
+            // SName
+            // 
+            this.SName.HeaderText = "Name";
+            this.SName.Name = "SName";
+            this.SName.ReadOnly = true;
+            // 
             // panel1
             // 
             this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.BackColor = System.Drawing.SystemColors.HotTrack;
             this.panel1.Controls.Add(this.btnCancel);
-            this.panel1.Controls.Add(this.btnAddNew);
+            this.panel1.Controls.Add(this.btnSubmit);
             this.panel1.Location = new System.Drawing.Point(-1, 793);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1310, 72);
@@ -264,6 +277,18 @@
             this.dataGridQuestion.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridQuestion.Size = new System.Drawing.Size(603, 394);
             this.dataGridQuestion.TabIndex = 47;
+            // 
+            // QID
+            // 
+            this.QID.HeaderText = "No";
+            this.QID.Name = "QID";
+            this.QID.ReadOnly = true;
+            // 
+            // Description
+            // 
+            this.Description.HeaderText = "Description";
+            this.Description.Name = "Description";
+            this.Description.ReadOnly = true;
             // 
             // metroLabel1
             // 
@@ -356,15 +381,15 @@
             this.metroLabel8.Text = "Type :";
             this.metroLabel8.UseCustomBackColor = true;
             // 
-            // comboEvType
+            // comboType
             // 
-            this.comboEvType.FormattingEnabled = true;
-            this.comboEvType.ItemHeight = 23;
-            this.comboEvType.Location = new System.Drawing.Point(138, 259);
-            this.comboEvType.Name = "comboEvType";
-            this.comboEvType.Size = new System.Drawing.Size(200, 29);
-            this.comboEvType.TabIndex = 61;
-            this.comboEvType.UseSelectable = true;
+            this.comboType.FormattingEnabled = true;
+            this.comboType.ItemHeight = 23;
+            this.comboType.Location = new System.Drawing.Point(138, 259);
+            this.comboType.Name = "comboType";
+            this.comboType.Size = new System.Drawing.Size(200, 29);
+            this.comboType.TabIndex = 61;
+            this.comboType.UseSelectable = true;
             // 
             // btnDelete
             // 
@@ -434,30 +459,6 @@
             this.btnAddStaff.UseVisualStyleBackColor = false;
             this.btnAddStaff.Click += new System.EventHandler(this.BtnAddStaff_Click_1);
             // 
-            // SID
-            // 
-            this.SID.HeaderText = "ID";
-            this.SID.Name = "SID";
-            this.SID.ReadOnly = true;
-            // 
-            // SName
-            // 
-            this.SName.HeaderText = "Name";
-            this.SName.Name = "SName";
-            this.SName.ReadOnly = true;
-            // 
-            // QID
-            // 
-            this.QID.HeaderText = "No";
-            this.QID.Name = "QID";
-            this.QID.ReadOnly = true;
-            // 
-            // Description
-            // 
-            this.Description.HeaderText = "Description";
-            this.Description.Name = "Description";
-            this.Description.ReadOnly = true;
-            // 
             // AddEvaluation
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -467,15 +468,15 @@
             this.Controls.Add(this.button1);
             this.Controls.Add(this.btnAddQuestion);
             this.Controls.Add(this.btnAddStaff);
-            this.Controls.Add(this.comboEvType);
+            this.Controls.Add(this.comboType);
             this.Controls.Add(this.metroLabel6);
             this.Controls.Add(this.metroLabel7);
             this.Controls.Add(this.metroLabel4);
             this.Controls.Add(this.dataGridQuestion);
             this.Controls.Add(this.dataGridStaff);
-            this.Controls.Add(this.metroDateTime2);
-            this.Controls.Add(this.metroDateTime1);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.dtToDate);
+            this.Controls.Add(this.dtFromDate);
+            this.Controls.Add(this.txtDescription);
             this.Controls.Add(this.lbCompanyName);
             this.Controls.Add(this.metroLabel3);
             this.Controls.Add(this.metroLabel2);
@@ -501,10 +502,10 @@
         #endregion
 
         private MetroFramework.Controls.MetroButton btnCancel;
-        private MetroFramework.Controls.MetroDateTime metroDateTime2;
-        private MetroFramework.Controls.MetroButton btnAddNew;
-        private MetroFramework.Controls.MetroDateTime metroDateTime1;
-        private System.Windows.Forms.TextBox textBox1;
+        private MetroFramework.Controls.MetroDateTime dtToDate;
+        private MetroFramework.Controls.MetroButton btnSubmit;
+        private MetroFramework.Controls.MetroDateTime dtFromDate;
+        private System.Windows.Forms.TextBox txtDescription;
         private System.Windows.Forms.TextBox lbCompanyName;
         private MetroFramework.Controls.MetroLabel metroLabel5;
         private System.Windows.Forms.DataGridView dataGridStaff;
@@ -518,7 +519,7 @@
         private MetroFramework.Controls.MetroLabel metroLabel7;
         private System.Windows.Forms.Panel panel2;
         private MetroFramework.Controls.MetroLabel metroLabel8;
-        private MetroFramework.Controls.MetroComboBox comboEvType;
+        private MetroFramework.Controls.MetroComboBox comboType;
         private System.Windows.Forms.Button btnAddStaff;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button btnAddQuestion;
