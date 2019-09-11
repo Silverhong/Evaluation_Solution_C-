@@ -15,7 +15,7 @@ namespace EvaluationSolution.Infrastructure
         public static string checkExist { get; set; } = "CheckExist";
         public static string GetByEvId { get; set; } = "getByEvId";
         public static string GetByStaffId { get; set; } = "getByStaffId";
-
         public static string UpdateStatusByAid { get; set; } = "updateStatusByAid";
+        public static string GetEvByStaffId { get; set; } = "getEvByStaffId";
     }
 }

@@ -12,5 +12,6 @@ namespace EvaluationSolution.Entity
         public string Date { get; set; }
         public string Score { get; set; }
         public string Status { get; set; }
+        public List<VDailyActivitiesDetail> details { get; set; }
     }
 }

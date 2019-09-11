@@ -225,7 +225,6 @@
             this.dataGridActivityDetail.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridActivityDetail.Size = new System.Drawing.Size(381, 537);
             this.dataGridActivityDetail.TabIndex = 62;
-            this.dataGridActivityDetail.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DataGridActivityDetail_CellClick);
             this.dataGridActivityDetail.DataBindingComplete += new System.Windows.Forms.DataGridViewBindingCompleteEventHandler(this.DataGridActivityDetail_DataBindingComplete);
             this.dataGridActivityDetail.Leave += new System.EventHandler(this.DataGridActivityDetail_Leave);
             // 

@@ -85,7 +85,6 @@ namespace EvaluationSolution.UI.View
                 if (r == radioButton)
                     continue;
                 r.Checked = false;
-
             }
         }
         private void RbtnUserRole_CheckedChanged(object sender, EventArgs e)

@@ -15,15 +15,14 @@ namespace EvaluationSolution.UI.View.SettingViewControl.User_Management
 {
     public partial class EvaluatedHistroy : MetroForm
     {
+        List<VEvaluationHistoryOnStaff> listEvH = new List<VEvaluationHistoryOnStaff>();
         public EvaluatedHistroy()
         {
             InitializeComponent();
-            List<VEvaluationHistory> listEvH = new List<VEvaluationHistory>();
-            listEvH.Add(new VEvaluationHistory() { No = 1, Description = "វាយតម្លៃប្រចាំខែ ឧសភា",  Duration= "01/05/2019 - 31/05/2019", Status = "Completed" });
-            listEvH.Add(new VEvaluationHistory() { No = 2, Description = "វាយតម្លៃប្រចាំខែ មិថុនា", Duration = "01/06/2019 - 31/07/2019", Status = "Completed" });
-            listEvH.Add(new VEvaluationHistory() { No = 3, Description = "វាយតម្លៃប្រចាំខែ កក្កដា", Duration = "01/07/2019 - 31/08/2019", Status = "Pending" });
-            dataGridMain.DataSource = listEvH;
-            
+            string url = ApiRouting.GetUrl("", "", "assignstaff", ApiFunction.GetEvByStaffId).ToString() + "?StaffId=" + GlobalVariable.StaffID;
+            bool confirm = url.Get<VEvaluationHistoryOnStaff>(ref listEvH);
+            if (confirm)
+                dataGridMain.DataSource = listEvH.Select(x=>new { ID = x.EvId, Description = x.EvDescription, Duration = x.duration, Status = x.Status }).ToList();
         }
         private void BtnClose_Click(object sender, EventArgs e)
         {
@@ -33,8 +32,8 @@ namespace EvaluationSolution.UI.View.SettingViewControl.User_Management
 
         private void EvaluatedHistroy_Load(object sender, EventArgs e)
         {
-            dataGridMain.Rows[dataGridMain.RowCount - 1].DefaultCellStyle.BackColor = Color.Red;
-            dataGridMain.Rows[dataGridMain.RowCount - 1].DefaultCellStyle.ForeColor = Color.White;
+            //dataGridMain.Rows[dataGridMain.RowCount - 1].DefaultCellStyle.BackColor = Color.Red;
+            //dataGridMain.Rows[dataGridMain.RowCount - 1].DefaultCellStyle.ForeColor = Color.White;
         }
     }
 }

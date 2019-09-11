@@ -37,7 +37,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.lbCompanyName = new System.Windows.Forms.TextBox();
+            this.txtScore = new System.Windows.Forms.TextBox();
             this.txtActivity = new System.Windows.Forms.TextBox();
             this.btnAddActivity = new MetroFramework.Controls.MetroButton();
             this.dataGridActivity = new System.Windows.Forms.DataGridView();
@@ -111,13 +111,13 @@
             this.label5.TabIndex = 2;
             this.label5.Text = "Score :";
             // 
-            // lbCompanyName
+            // txtScore
             // 
-            this.lbCompanyName.Font = new System.Drawing.Font("Khmer OS Siemreap", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbCompanyName.Location = new System.Drawing.Point(378, 101);
-            this.lbCompanyName.Name = "lbCompanyName";
-            this.lbCompanyName.Size = new System.Drawing.Size(155, 37);
-            this.lbCompanyName.TabIndex = 51;
+            this.txtScore.Font = new System.Drawing.Font("Khmer OS Siemreap", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtScore.Location = new System.Drawing.Point(378, 101);
+            this.txtScore.Name = "txtScore";
+            this.txtScore.Size = new System.Drawing.Size(155, 37);
+            this.txtScore.TabIndex = 51;
             // 
             // txtActivity
             // 
@@ -288,7 +288,7 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.lbCompanyName);
+            this.groupBox1.Controls.Add(this.txtScore);
             this.groupBox1.Controls.Add(this.label12);
             this.groupBox1.Controls.Add(this.label11);
             this.groupBox1.Controls.Add(this.label4);
@@ -334,6 +334,7 @@
             this.btnSubmit.UseCustomBackColor = true;
             this.btnSubmit.UseCustomForeColor = true;
             this.btnSubmit.UseSelectable = true;
+            this.btnSubmit.Click += new System.EventHandler(this.BtnSubmit_Click);
             // 
             // AddDailyActivities
             // 
@@ -368,7 +369,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox lbCompanyName;
+        private System.Windows.Forms.TextBox txtScore;
         private System.Windows.Forms.TextBox txtActivity;
         private MetroFramework.Controls.MetroButton btnAddActivity;
         private System.Windows.Forms.DataGridView dataGridActivity;

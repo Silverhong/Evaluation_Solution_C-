@@ -73,11 +73,20 @@ namespace EvaluationSolution.UI.Forms
         }
         private void Menu_Checked(object sender,EventArgs e)
         {
+            if (ClearCheck((RadioButton)sender))
+                return;
             string name = ((RadioButton)sender).Text.ToLower().ToString();
             var view = Singleton.Instance.Container.Resolve<MainView>(name);
             view.Dock = DockStyle.Fill;
+            view.Init();
             panelMain.Controls.Clear();
             panelMain.Controls.Add(view);
+        }
+        private bool ClearCheck(RadioButton radioButton)
+        {
+            if (!radioButton.Checked)
+                return true;
+            return false;
         }
         private void LbLoginAs_Click(object sender, EventArgs e)
         {

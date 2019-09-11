@@ -17,24 +17,26 @@ namespace EvaluationSolution.UI.View.ManagementViewControl
 {
     public partial class EvaluationView : MainView
     {
-        DataTable dt = new DataTable();
         System.Windows.Forms.Control cell;
         private int lastCol = 1;
         private int lastRow = 0;
         bool isAlreadyTotal = false;
         bool isColoredTotal = false;
         private VEvaluationOnStaff VEvaluationOnStaff;
+        string url = ApiRouting.GetUrl("", "", "evaluation", ApiFunction.GetByStaffId).ToString() + "?StaffId=" + GlobalVariable.StaffID;
         public EvaluationView()
         {
             InitializeComponent();
             VEvaluationOnStaff = new VEvaluationOnStaff();
-            string url = ApiRouting.GetUrl("", "", "evaluation", ApiFunction.GetByStaffId).ToString() + "?StaffId=" + GlobalVariable.StaffID;
+        }
+        public override void Init()
+        {
             bool confirm = url.GetDeserializeObject<VEvaluationOnStaff>(ref VEvaluationOnStaff);
             if (confirm)
             {
+                DataTable dt = new DataTable();
                 lbDescription.Text = VEvaluationOnStaff.EvaDescription;
                 dt.Columns.Add(new DataColumn() { ReadOnly = true, ColumnName = "ចំណុចត្រូវវាយតម្លៃ" });
-                dataGridMain.DataSource = dt;
                 int id = 1;
                 foreach (var obj in VEvaluationOnStaff.Questions)
                 {
@@ -47,6 +49,13 @@ namespace EvaluationSolution.UI.View.ManagementViewControl
                 }
                 dt.Rows.Add("Total");
                 //dataGridMain.AutoGenerateColumns = true;
+                dataGridMain.DataSource = dt;
+                panel3.Controls.Clear();
+                panel3.Controls.Add(dataGridMain);
+                panel3.Controls.Add(btnSubmit);
+                panel3.Controls.Add(btnClearAll);
+                panel3.Controls.Add(btnCancel);
+                panel3.Controls.Add(lbDescription);
                 ConfigureDataGrid();
             }
             else
@@ -54,7 +63,6 @@ namespace EvaluationSolution.UI.View.ManagementViewControl
                 panel3.Controls.Clear();
                 panel3.Controls.Add(new NoView() { Dock = DockStyle.Fill });
             }
-            
         }
         public void ConfigureDataGrid()
         {
@@ -247,7 +255,17 @@ namespace EvaluationSolution.UI.View.ManagementViewControl
             string respond = "";
             bool confirm = url.Post<AssignScore>(json,ref respond);
             if (respond.ToLower() == "successful")
+            {
                 MessageBox.Show("Evaluation submitted successful");
+                string response = "";
+                string aid = VEvaluationOnStaff.AssignId;
+                string updateStatusUrl = ApiRouting.GetUrl("", "", "assignstaff", ApiFunction.UpdateStatusByAid).ToString() + "?Aid=" + aid;
+                bool updateConfirm = updateStatusUrl.Get<AssignStaff>(ref response);
+                if(updateConfirm && response.ToLower() == "successful")
+                {
+                    Init();
+                }
+            }
         }
     }
 }

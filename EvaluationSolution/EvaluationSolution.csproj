@@ -88,6 +88,8 @@
     <Compile Include="Entity\AssignScore.cs" />
     <Compile Include="Entity\AssignScoreDetail.cs" />
     <Compile Include="Entity\AssignStaff.cs" />
+    <Compile Include="Entity\DailyActivitiesDetail.cs" />
+    <Compile Include="Entity\DailyActivitiesOnStaff.cs" />
     <Compile Include="Entity\Department.cs" />
     <Compile Include="Entity\Evaluation.cs" />
     <Compile Include="Entity\EvaluationDetail.cs" />
@@ -107,11 +109,13 @@
     <Compile Include="Entity\VAddActivity.cs" />
     <Compile Include="Entity\VAllDailyActivity.cs" />
     <Compile Include="Entity\VDailyActivities.cs" />
+    <Compile Include="Entity\VDailyActivitiesDetail.cs" />
     <Compile Include="Entity\VDepartment.cs" />
     <Compile Include="Entity\VEvaluation.cs" />
     <Compile Include="Entity\VEvaluationDetail.cs" />
     <Compile Include="Entity\VEvaluationDetailStaff.cs" />
     <Compile Include="Entity\VEvaluationHistory.cs" />
+    <Compile Include="Entity\VEvaluationHistoryOnStaff.cs" />
     <Compile Include="Entity\VEvaluationOnStaff.cs" />
     <Compile Include="Entity\VEvaluationOnStaffQuestion.cs" />
     <Compile Include="Entity\VEvaluationOnStaffStaff.cs" />
