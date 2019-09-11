@@ -136,6 +136,7 @@
             this.dataGridActivities.DefaultCellStyle = dataGridViewCellStyle3;
             this.dataGridActivities.EnableHeadersVisualStyles = false;
             this.dataGridActivities.Location = new System.Drawing.Point(23, 142);
+            this.dataGridActivities.MultiSelect = false;
             this.dataGridActivities.Name = "dataGridActivities";
             this.dataGridActivities.ReadOnly = true;
             dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;

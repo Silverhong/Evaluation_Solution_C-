@@ -161,8 +161,7 @@
             this.metroLabel2.TabIndex = 18;
             this.metroLabel2.Text = "Staff :";
             this.metroLabel2.UseCustomBackColor = true;
-            this.metroLabel2.Click += new System.EventHandler(this.MetroLabel2_Click);
-            // 
+             // 
             // textBox1
             // 
             this.textBox1.Anchor = System.Windows.Forms.AnchorStyles.Top;
@@ -232,7 +231,6 @@
             this.metroLabel5.TabIndex = 18;
             this.metroLabel5.Text = "From Date :";
             this.metroLabel5.UseCustomBackColor = true;
-            this.metroLabel5.Click += new System.EventHandler(this.MetroLabel2_Click);
             // 
             // metroLabel6
             // 
@@ -247,7 +245,6 @@
             this.metroLabel6.TabIndex = 17;
             this.metroLabel6.Text = "To Date :";
             this.metroLabel6.UseCustomBackColor = true;
-            this.metroLabel6.Click += new System.EventHandler(this.MetroLabel1_Click);
             // 
             // panel1
             // 

@@ -72,7 +72,7 @@
             this.txtAddress.Location = new System.Drawing.Point(381, 222);
             this.txtAddress.Multiline = true;
             this.txtAddress.Name = "txtAddress";
-            this.txtAddress.Size = new System.Drawing.Size(227, 123);
+            this.txtAddress.Size = new System.Drawing.Size(304, 123);
             this.txtAddress.TabIndex = 12;
             // 
             // txtEmail
@@ -80,7 +80,7 @@
             this.txtEmail.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtEmail.Location = new System.Drawing.Point(381, 400);
             this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(227, 25);
+            this.txtEmail.Size = new System.Drawing.Size(304, 25);
             this.txtEmail.TabIndex = 11;
             // 
             // txtPhone
@@ -88,7 +88,7 @@
             this.txtPhone.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPhone.Location = new System.Drawing.Point(381, 359);
             this.txtPhone.Name = "txtPhone";
-            this.txtPhone.Size = new System.Drawing.Size(227, 25);
+            this.txtPhone.Size = new System.Drawing.Size(304, 25);
             this.txtPhone.TabIndex = 6;
             // 
             // txtName
@@ -96,7 +96,7 @@
             this.txtName.Font = new System.Drawing.Font("Khmer OS Siemreap", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtName.Location = new System.Drawing.Point(381, 85);
             this.txtName.Name = "txtName";
-            this.txtName.Size = new System.Drawing.Size(227, 37);
+            this.txtName.Size = new System.Drawing.Size(304, 37);
             this.txtName.TabIndex = 5;
             // 
             // metroLabel5
@@ -205,7 +205,7 @@
             this.comboDepartment.ItemHeight = 23;
             this.comboDepartment.Location = new System.Drawing.Point(381, 440);
             this.comboDepartment.Name = "comboDepartment";
-            this.comboDepartment.Size = new System.Drawing.Size(112, 29);
+            this.comboDepartment.Size = new System.Drawing.Size(304, 29);
             this.comboDepartment.TabIndex = 15;
             this.comboDepartment.UseSelectable = true;
             this.comboDepartment.SelectedValueChanged += new System.EventHandler(this.ComboDepartment_SelectedValueChanged);
@@ -225,7 +225,7 @@
             this.dtDOB.Location = new System.Drawing.Point(381, 180);
             this.dtDOB.MinimumSize = new System.Drawing.Size(0, 29);
             this.dtDOB.Name = "dtDOB";
-            this.dtDOB.Size = new System.Drawing.Size(227, 29);
+            this.dtDOB.Size = new System.Drawing.Size(304, 29);
             this.dtDOB.TabIndex = 16;
             // 
             // comboOffice
@@ -234,7 +234,7 @@
             this.comboOffice.ItemHeight = 23;
             this.comboOffice.Location = new System.Drawing.Point(381, 482);
             this.comboOffice.Name = "comboOffice";
-            this.comboOffice.Size = new System.Drawing.Size(112, 29);
+            this.comboOffice.Size = new System.Drawing.Size(304, 29);
             this.comboOffice.TabIndex = 15;
             this.comboOffice.UseSelectable = true;
             // 
@@ -244,7 +244,7 @@
             this.comboPosition.ItemHeight = 23;
             this.comboPosition.Location = new System.Drawing.Point(381, 524);
             this.comboPosition.Name = "comboPosition";
-            this.comboPosition.Size = new System.Drawing.Size(112, 29);
+            this.comboPosition.Size = new System.Drawing.Size(304, 29);
             this.comboPosition.TabIndex = 15;
             this.comboPosition.UseSelectable = true;
             // 
@@ -254,7 +254,7 @@
             this.comboGroup.ItemHeight = 23;
             this.comboGroup.Location = new System.Drawing.Point(381, 566);
             this.comboGroup.Name = "comboGroup";
-            this.comboGroup.Size = new System.Drawing.Size(112, 29);
+            this.comboGroup.Size = new System.Drawing.Size(304, 29);
             this.comboGroup.TabIndex = 15;
             this.comboGroup.UseSelectable = true;
             // 
@@ -262,9 +262,9 @@
             // 
             this.metroTile1.ActiveControl = null;
             this.metroTile1.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            this.metroTile1.Location = new System.Drawing.Point(105, 5);
+            this.metroTile1.Location = new System.Drawing.Point(59, 5);
             this.metroTile1.Name = "metroTile1";
-            this.metroTile1.Size = new System.Drawing.Size(491, 39);
+            this.metroTile1.Size = new System.Drawing.Size(626, 39);
             this.metroTile1.TabIndex = 17;
             this.metroTile1.Text = "Staff Recruitment";
             this.metroTile1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -282,14 +282,14 @@
             "Female"});
             this.comboGender.Location = new System.Drawing.Point(381, 135);
             this.comboGender.Name = "comboGender";
-            this.comboGender.Size = new System.Drawing.Size(112, 29);
+            this.comboGender.Size = new System.Drawing.Size(304, 29);
             this.comboGender.TabIndex = 15;
             this.comboGender.UseSelectable = true;
             // 
             // btnCancel
             // 
             this.btnCancel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnCancel.Location = new System.Drawing.Point(451, 627);
+            this.btnCancel.Location = new System.Drawing.Point(499, 666);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(108, 42);
             this.btnCancel.TabIndex = 18;
@@ -300,7 +300,7 @@
             // btnSubmit
             // 
             this.btnSubmit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnSubmit.Location = new System.Drawing.Point(191, 627);
+            this.btnSubmit.Location = new System.Drawing.Point(239, 666);
             this.btnSubmit.Name = "btnSubmit";
             this.btnSubmit.Size = new System.Drawing.Size(108, 42);
             this.btnSubmit.TabIndex = 19;
@@ -311,7 +311,7 @@
             // btnAddNew
             // 
             this.btnAddNew.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnAddNew.Location = new System.Drawing.Point(321, 627);
+            this.btnAddNew.Location = new System.Drawing.Point(369, 666);
             this.btnAddNew.Name = "btnAddNew";
             this.btnAddNew.Size = new System.Drawing.Size(108, 42);
             this.btnAddNew.TabIndex = 19;
@@ -323,7 +323,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(706, 692);
+            this.ClientSize = new System.Drawing.Size(754, 731);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnAddNew);
             this.Controls.Add(this.btnSubmit);

@@ -8,87 +8,31 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using EvaluationSolution.Entity;
+using EvaluationSolution.Infrastructure;
 
 namespace EvaluationSolution.UI.View.DailyActivity
 {
     public partial class DailyActivityView : MainView
     {
+        List<VAllDailyActivity> listAllDActivity;
         public DailyActivityView()
         {
             InitializeComponent();
-            List<VAllDailyActivity> listAllDActivity = new List<VAllDailyActivity>();
-            listAllDActivity.Add(new VAllDailyActivity()
-            {
-                No = "001",
-                Date = "12/07/2019",
-                Staff = "Kimhong",
-                Score = "90",
-                Department = "Programming",
-                Office = "C2B3",
-                Status = "Approved"
-            });
-            listAllDActivity.Add(new VAllDailyActivity()
-            {
-                No = "002",
-                Date = "13/07/2019",
-                Staff = "Kimhong",
-                Score = "80",
-                Department = "Programming",
-                Office = "C2B3",
-                Status = "Approved"
-            });
-            listAllDActivity.Add(new VAllDailyActivity()
-            {
-                No = "003",
-                Date = "12/07/2019",
-                Staff = "Visal",
-                Score = "80",
-                Department = "Networking",
-                Office = "N2B3",
-                Status = "Approved"
-            });
-            listAllDActivity.Add(new VAllDailyActivity()
-            {
-                No = "004",
-                Date = "12/07/2019",
-                Staff = "Seyla",
-                Score = "90",
-                Department = "Media",
-                Office = "M2B1",
-                Status = "Pending"
-            });
-            listAllDActivity.Add(new VAllDailyActivity()
-            {
-                No = "001",
-                Date = "12/07/2019",
-                Staff = "Phearith",
-                Score = "75",
-                Department = "Programming",
-                Office = "P2B2",
-                Status = "Pending"
-            });
+            listAllDActivity = new List<VAllDailyActivity>();
+        }
+        public override void Init()
+        {
+            string url = ApiRouting.GetUrl("", "", "dailyactivity", ApiFunction.GetAllByManager).ToString() + "?StaffId=" + GlobalVariable.StaffID;
+            bool confirm = url.Get<VAllDailyActivity>(ref listAllDActivity);
             dataGridMain.DataSource = listAllDActivity;
-            foreach(DataGridViewRow dt in dataGridMain.Rows)
+            foreach (DataGridViewRow dt in dataGridMain.Rows)
             {
                 if ((string)dt.Cells["Status"].Value == "Pending")
                 {
-                    dt.DefaultCellStyle.BackColor = Color.Red;
-                    dt.DefaultCellStyle.ForeColor = Color.White;
+                    dt.DefaultCellStyle.ForeColor = Color.Red;
                 }
-
             }
         }
-
-        private void MetroLabel1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void MetroLabel2_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void DataGridMain_DataBindingComplete(object sender, DataGridViewBindingCompleteEventArgs e)
         {
             dataGridMain.ClearSelection();
@@ -98,10 +42,17 @@ namespace EvaluationSolution.UI.View.DailyActivity
         {
             dataGridMain.ClearSelection();
         }
-
         private void DataGridMain_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            DailyActivityDetail dailyActivityDetail = new DailyActivityDetail();
+            string No = dataGridMain.Rows[e.RowIndex].Cells[0].Value.ToString();
+            string Date = dataGridMain.Rows[e.RowIndex].Cells[1].Value.ToString();
+            string Staff = dataGridMain.Rows[e.RowIndex].Cells[2].Value.ToString();
+            string Score = dataGridMain.Rows[e.RowIndex].Cells[3].Value.ToString();
+            string Department = dataGridMain.Rows[e.RowIndex].Cells[4].Value.ToString();
+            string Office = dataGridMain.Rows[e.RowIndex].Cells[5].Value.ToString();
+            string Status = dataGridMain.Rows[e.RowIndex].Cells[6].Value.ToString();
+            string[] st = { No, Date, Staff, Score, Department, Office, Status };
+            DailyActivityDetail dailyActivityDetail = new DailyActivityDetail(st);
             dailyActivityDetail.ShowDialog();
         }
     }

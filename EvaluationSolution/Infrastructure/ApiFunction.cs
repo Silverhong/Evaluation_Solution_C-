@@ -17,5 +17,8 @@ namespace EvaluationSolution.Infrastructure
         public static string GetByStaffId { get; set; } = "getByStaffId";
         public static string UpdateStatusByAid { get; set; } = "updateStatusByAid";
         public static string GetEvByStaffId { get; set; } = "getEvByStaffId";
+        public static string GetAllByManager { get; set; } = "getAllByManager";
+        public static string GetByStaDAId { get; set; } = "getByStaDAId";
+
     }
 }

@@ -110,6 +110,7 @@
     <Compile Include="Entity\VAllDailyActivity.cs" />
     <Compile Include="Entity\VDailyActivities.cs" />
     <Compile Include="Entity\VDailyActivitiesDetail.cs" />
+    <Compile Include="Entity\VDailyActivitiesNoQuestion.cs" />
     <Compile Include="Entity\VDepartment.cs" />
     <Compile Include="Entity\VEvaluation.cs" />
     <Compile Include="Entity\VEvaluationDetail.cs" />

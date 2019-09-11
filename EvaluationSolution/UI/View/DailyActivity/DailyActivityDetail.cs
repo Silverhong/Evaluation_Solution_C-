@@ -1,4 +1,5 @@
 ﻿using EvaluationSolution.Entity;
+using EvaluationSolution.Infrastructure;
 using MetroFramework.Forms;
 using System;
 using System.Collections.Generic;
@@ -14,27 +15,30 @@ namespace EvaluationSolution.UI.View.DailyActivity
 {
     public partial class DailyActivityDetail : MetroForm
     {
-        public DailyActivityDetail()
+        string StaDAId = "";
+        List<VDailyActivitiesNoQuestion> listVAddActivity;
+        public DailyActivityDetail(string[] st)
         {
             InitializeComponent();
-            List<VAddActivity> listVAddActivity = new List<VAddActivity>()
+            listVAddActivity = new List<VDailyActivitiesNoQuestion>();
+            lbNo.Text = st[0];
+            lbDate.Text = st[1];
+            lbStaff.Text = st[2];
+            lbScore.Text = st[3];
+            lbDepartment.Text = st[4];
+            lbOffice.Text = st[5];
+            this.StaDAId = st[0];
+            Init();
+        }
+        public void Init()
+        {
+            string url = ApiRouting.GetUrl("", "", "dailyactivitydetail", ApiFunction.GetByStaDAId).ToString() + "?StaDAId=" + StaDAId;
+            bool confirm = url.Get<VDailyActivitiesNoQuestion>(ref listVAddActivity);
+            if (!confirm)
             {
-                new VAddActivity()
-                {
-                    No="001",
-                    Description="Complete Purchase Order"
-                },
-                new VAddActivity()
-                {
-                    No="002",
-                    Description="Add Fixed Asset"
-                },
-                new VAddActivity()
-                {
-                    No="003",
-                    Description="Fix some technical issues"
-                },
-            };
+                MessageBox.Show("Cannot connect to server!!");
+                return;
+            }
             dataGridMain.DataSource = listVAddActivity;
         }
     }
